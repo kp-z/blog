@@ -103,13 +103,13 @@
       
         <tags>
             
-            <tag> 入门 </tag>
-            
             <tag> 小程序 </tag>
             
-            <tag> 教程 </tag>
+            <tag> 入门 </tag>
             
             <tag> 推荐 </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> UI </tag>
             
@@ -140,13 +140,13 @@
       
         <tags>
             
-            <tag> 入门 </tag>
-            
             <tag> 小程序 </tag>
             
-            <tag> 教程 </tag>
+            <tag> 入门 </tag>
             
             <tag> 推荐 </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> UI </tag>
             
@@ -202,9 +202,9 @@
             
             <tag> 生活 </tag>
             
-            <tag> 教程 </tag>
-            
             <tag> 推荐 </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> 效率 </tag>
             
@@ -237,9 +237,9 @@
       
         <tags>
             
-            <tag> 中文 </tag>
-            
             <tag> 推荐 </tag>
+            
+            <tag> 中文 </tag>
             
             <tag> Mac </tag>
             
@@ -402,15 +402,15 @@
       
         <tags>
             
+            <tag> 推荐 </tag>
+            
+            <tag> 教程 </tag>
+            
             <tag> Hexo </tag>
             
             <tag> Web </tag>
             
-            <tag> 教程 </tag>
-            
             <tag> 中文 </tag>
-            
-            <tag> 推荐 </tag>
             
         </tags>
       
@@ -439,11 +439,11 @@
       
         <tags>
             
+            <tag> 教程 </tag>
+            
             <tag> Hexo </tag>
             
             <tag> Web </tag>
-            
-            <tag> 教程 </tag>
             
             <tag> 中文 </tag>
             
