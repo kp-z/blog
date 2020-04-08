@@ -2173,6 +2173,9 @@ blockquote footer cite:before {
     margin-left: 15px;
   }
 }
+.weibo-dark {
+  display: none;
+}
 .category-content ol,
 .category-content ul {
   margin-top: 0.4rem;
@@ -4963,6 +4966,12 @@ img {
 [data-theme='dark'] .note {
   filter: brightness(0.7);
   color: #4c4948;
+}
+[data-theme='dark'] .weibo-light {
+  display: none;
+}
+[data-theme='dark'] .weibo-dark {
+  display: block;
 }
 [data-theme='dark'] #hexo-blog-encrypt label,
 [data-theme='dark'] #hexo-blog-encrypt input {
