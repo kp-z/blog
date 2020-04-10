@@ -58,43 +58,6 @@
     
     
     <entry>
-      <title>小程序UI组件推荐</title>
-      <link href="/2020/02/22/Miniapp_component_UI_rec/"/>
-      <url>/2020/02/22/Miniapp_component_UI_rec/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><div class="note primary">            <p>记录在制作小程序时使用的组件</p>          </div><h2 id="ColorUI"><a href="#ColorUI" class="headerlink" title="ColorUI"></a>ColorUI</h2><blockquote><p>ColorUI是一个css库！！！在你引入样式后可以根据class来调用组件，一些含有交互的操作也有，可以为你开发提供一些思路。<a href="https://www.color-ui.com/" target="_blank" rel="noopener">下载</a>|<a href="https://github.com/weilanwl/ColorUI" target="_blank" rel="noopener">仓库</a>｜扫描下面二维码可以预览全部组件👇<br><img src="/" class="lazyload" data-src="https://i.loli.net/2020/02/22/uiMEAIZYFpPTGKB.png"  alt=""></p></blockquote><p>直接下载组件，根据官方Readme介绍，移动<code>/demo</code>（我把文件名改为colorui）到小程序目录里即可，我是创建了文件夹<code>components</code>用于统一管理外部组件，结构如下。</p><p><img src="/" class="lazyload" data-src="https://i.loli.net/2020/02/22/KAlbTFatwoev3yk.png"  alt=""></p><p>下一步要在全局样式表<code>app.wxss</code>中导入样式（注意自己的路径⚠️）</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">'./components/colorui/main.wxss'</span>; # 样式</span><br><span class="line"><span class="keyword">@import</span> <span class="string">'./components/colorui/icon.wxss'</span>; # 图标</span><br></pre></td></tr></table></figure><p>然后就可以在自己的Pages里调用样式了，作者并没有提供详尽的使用说明，所以可以先在手机上看Demo效果，然后去对应<code>.wxml</code>文件里找到位置，找到标签，如果需要修改可以去对应<code>main.wxss</code>文件中<code>Ctrl+F</code>找到修改源码，或者自己写css覆盖。</p><p>ColorUI是我一直使用的UI组件，所以详细介绍一下，当然还又很多其他的UI组件也不错。</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul><li><a href="">iViewUI</a></li><li><a href="">MinUI</a></li><li><a href="">TaroUI</a></li><li><a href="">Vant组件</a></li><li><a href="">WuxUI</a></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-          <category> 教程 </category>
-          
-          <category> 小程序 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 推荐 </tag>
-            
-            <tag> 小程序 </tag>
-            
-            <tag> 入门 </tag>
-            
-            <tag> 教程 </tag>
-            
-            <tag> UI </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>小程序功能组件推荐</title>
       <link href="/2020/02/22/MIniapp_component_Function_rec/"/>
       <url>/2020/02/22/MIniapp_component_Function_rec/</url>
@@ -115,13 +78,50 @@
       
         <tags>
             
+            <tag> 教程 </tag>
+            
             <tag> 推荐 </tag>
             
             <tag> 小程序 </tag>
             
             <tag> 入门 </tag>
             
+            <tag> UI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>小程序UI组件推荐</title>
+      <link href="/2020/02/22/Miniapp_component_UI_rec/"/>
+      <url>/2020/02/22/Miniapp_component_UI_rec/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><div class="note primary">            <p>记录在制作小程序时使用的组件</p>          </div><h2 id="ColorUI"><a href="#ColorUI" class="headerlink" title="ColorUI"></a>ColorUI</h2><blockquote><p>ColorUI是一个css库！！！在你引入样式后可以根据class来调用组件，一些含有交互的操作也有，可以为你开发提供一些思路。<a href="https://www.color-ui.com/" target="_blank" rel="noopener">下载</a>|<a href="https://github.com/weilanwl/ColorUI" target="_blank" rel="noopener">仓库</a>｜扫描下面二维码可以预览全部组件👇<br><img src="/" class="lazyload" data-src="https://i.loli.net/2020/02/22/uiMEAIZYFpPTGKB.png"  alt=""></p></blockquote><p>直接下载组件，根据官方Readme介绍，移动<code>/demo</code>（我把文件名改为colorui）到小程序目录里即可，我是创建了文件夹<code>components</code>用于统一管理外部组件，结构如下。</p><p><img src="/" class="lazyload" data-src="https://i.loli.net/2020/02/22/KAlbTFatwoev3yk.png"  alt=""></p><p>下一步要在全局样式表<code>app.wxss</code>中导入样式（注意自己的路径⚠️）</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">'./components/colorui/main.wxss'</span>; # 样式</span><br><span class="line"><span class="keyword">@import</span> <span class="string">'./components/colorui/icon.wxss'</span>; # 图标</span><br></pre></td></tr></table></figure><p>然后就可以在自己的Pages里调用样式了，作者并没有提供详尽的使用说明，所以可以先在手机上看Demo效果，然后去对应<code>.wxml</code>文件里找到位置，找到标签，如果需要修改可以去对应<code>main.wxss</code>文件中<code>Ctrl+F</code>找到修改源码，或者自己写css覆盖。</p><p>ColorUI是我一直使用的UI组件，所以详细介绍一下，当然还又很多其他的UI组件也不错。</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul><li><a href="">iViewUI</a></li><li><a href="">MinUI</a></li><li><a href="">TaroUI</a></li><li><a href="">Vant组件</a></li><li><a href="">WuxUI</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 教程 </category>
+          
+          <category> 小程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> 教程 </tag>
+            
+            <tag> 推荐 </tag>
+            
+            <tag> 小程序 </tag>
+            
+            <tag> 入门 </tag>
             
             <tag> UI </tag>
             
@@ -175,13 +175,13 @@
       
         <tags>
             
-            <tag> 推荐 </tag>
-            
-            <tag> 效率 </tag>
-            
             <tag> 生活 </tag>
             
             <tag> 教程 </tag>
+            
+            <tag> 推荐 </tag>
+            
+            <tag> 效率 </tag>
             
             <tag> 番茄工作法 </tag>
             
@@ -212,13 +212,13 @@
       
         <tags>
             
-            <tag> Mac </tag>
-            
-            <tag> 软件 </tag>
-            
             <tag> 中文 </tag>
             
             <tag> 推荐 </tag>
+            
+            <tag> Mac </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> 效率 </tag>
             
@@ -361,6 +361,39 @@
     
     
     <entry>
+      <title>Hexo建站相关文章收藏汇总</title>
+      <link href="/2019/08/24/Hexo%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%94%B6%E8%97%8F%E6%B1%87%E6%80%BB/"/>
+      <url>/2019/08/24/Hexo%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%94%B6%E8%97%8F%E6%B1%87%E6%80%BB/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="pjax实现音乐不间断播放-Shawn’s-Blog"><a href="#pjax实现音乐不间断播放-Shawn’s-Blog" class="headerlink" title="pjax实现音乐不间断播放-Shawn’s Blog"></a><a href="https://www.shawnlin.cn/a54bd4f/#jquery-pjax" target="_blank" rel="noopener">pjax实现音乐不间断播放-Shawn’s Blog</a></h2><h2 id="hexo-theme-butterfly安装文档-JerryC"><a href="#hexo-theme-butterfly安装文档-JerryC" class="headerlink" title="hexo-theme-butterfly安装文档-JerryC"></a><a href="https://jerryc.me/posts/21cfbf15/" target="_blank" rel="noopener">hexo-theme-butterfly安装文档-JerryC</a></h2><h2 id="pjax使用小结-anyesu-简书"><a href="#pjax使用小结-anyesu-简书" class="headerlink" title="pjax使用小结-anyesu-简书"></a><a href="https://www.jianshu.com/p/557cad38e7dd" target="_blank" rel="noopener">pjax使用小结-anyesu-简书</a></h2><h2 id="hexo添加Aplayer音乐播放插件"><a href="#hexo添加Aplayer音乐播放插件" class="headerlink" title="hexo添加Aplayer音乐播放插件"></a><a href="https://bzqll.com/2017/12/84.html" target="_blank" rel="noopener">hexo添加Aplayer音乐播放插件</a></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Web </tag>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 中文 </tag>
+            
+            <tag> 推荐 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在Mac上使用Hexo创建站点经验</title>
       <link href="/2019/08/24/The_experience_of%20_Hexo/"/>
       <url>/2019/08/24/The_experience_of%20_Hexo/</url>
@@ -381,46 +414,13 @@
       
         <tags>
             
-            <tag> 中文 </tag>
-            
-            <tag> 教程 </tag>
-            
             <tag> Hexo </tag>
             
             <tag> Web </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo建站相关文章收藏汇总</title>
-      <link href="/2019/08/24/Hexo%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%94%B6%E8%97%8F%E6%B1%87%E6%80%BB/"/>
-      <url>/2019/08/24/Hexo%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0%E6%94%B6%E8%97%8F%E6%B1%87%E6%80%BB/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="pjax实现音乐不间断播放-Shawn’s-Blog"><a href="#pjax实现音乐不间断播放-Shawn’s-Blog" class="headerlink" title="pjax实现音乐不间断播放-Shawn’s Blog"></a><a href="https://www.shawnlin.cn/a54bd4f/#jquery-pjax" target="_blank" rel="noopener">pjax实现音乐不间断播放-Shawn’s Blog</a></h2><h2 id="hexo-theme-butterfly安装文档-JerryC"><a href="#hexo-theme-butterfly安装文档-JerryC" class="headerlink" title="hexo-theme-butterfly安装文档-JerryC"></a><a href="https://jerryc.me/posts/21cfbf15/" target="_blank" rel="noopener">hexo-theme-butterfly安装文档-JerryC</a></h2><h2 id="pjax使用小结-anyesu-简书"><a href="#pjax使用小结-anyesu-简书" class="headerlink" title="pjax使用小结-anyesu-简书"></a><a href="https://www.jianshu.com/p/557cad38e7dd" target="_blank" rel="noopener">pjax使用小结-anyesu-简书</a></h2><h2 id="hexo添加Aplayer音乐播放插件"><a href="#hexo添加Aplayer音乐播放插件" class="headerlink" title="hexo添加Aplayer音乐播放插件"></a><a href="https://bzqll.com/2017/12/84.html" target="_blank" rel="noopener">hexo添加Aplayer音乐播放插件</a></h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 中文 </tag>
-            
-            <tag> 推荐 </tag>
-            
             <tag> 教程 </tag>
             
-            <tag> Hexo </tag>
-            
-            <tag> Web </tag>
+            <tag> 中文 </tag>
             
         </tags>
       
