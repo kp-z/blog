@@ -5,8 +5,8 @@
     
     <entry>
       <title>认知机器人：感知物体位置和形态</title>
-      <link href="/2020/04/16/%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%84%9F%E7%9F%A5%E7%89%A9%E4%BD%93%E4%BD%8D%E7%BD%AE%E5%92%8C%E5%BD%A2%E6%80%81/"/>
-      <url>/2020/04/16/%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%84%9F%E7%9F%A5%E7%89%A9%E4%BD%93%E4%BD%8D%E7%BD%AE%E5%92%8C%E5%BD%A2%E6%80%81/</url>
+      <link href="/2020/04/16/%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%84%9F%E7%9F%A5%E7%89%A9%E4%BD%93%E4%BD%8D%E7%BD%AE%E5%92%8C%E7%8A%B6%E6%80%81/"/>
+      <url>/2020/04/16/%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%84%9F%E7%9F%A5%E7%89%A9%E4%BD%93%E4%BD%8D%E7%BD%AE%E5%92%8C%E7%8A%B6%E6%80%81/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote><p>参加学校实验课程做的机器人项目，在Ros系统上使用RealSense的RGB-D摄像头实时识别物体的位置和形态，提供pointcloud数据给系统，以便机器人后续操作。</p></blockquote><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-1.jpg"  alt="cg"></p><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-2.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-3.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-4.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-5.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-6.jpg"  alt="cg"></p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-7.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-8.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-9.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-10.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-11.jpg"  alt="cg"></p><h1 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-12.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-13.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-14.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-15.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-16.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-17.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-18.jpg"  alt="cg"></p><h1 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-19.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-20.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-21.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-22.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-23.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-24.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-25.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-26.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-27.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-28.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-29.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-30.jpg"  alt="cg"></p>]]></content>
       
@@ -87,43 +87,6 @@
     
     
     <entry>
-      <title>小程序功能组件推荐</title>
-      <link href="/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-      <url>/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>最近出于兴趣在做小程序的开发，所以找了很多“轮子”，大多数开源组件都不尽人意，这里挑出几个好用的分享一下。</p><h2 id="NewWxComment-为数不多的评论组件"><a href="#NewWxComment-为数不多的评论组件" class="headerlink" title="NewWxComment 为数不多的评论组件"></a>NewWxComment 为数不多的评论组件</h2><p><a href="https://github.com/yicm/NewWxComment" target="_blank" rel="noopener">仓库</a> | <a href="https://github.com/yicm" target="_blank" rel="noopener">作者</a></p><blockquote><p>NewWxComment<a href="https://github.com/yicm/NewWxComment是一个微信小程序的评论组件，结合BaaS提供商LeanCloud，无需其他另外的个人或者云服务器，就可以免费使用。解决了需要个人去注册域名、备案、购买云服务器的繁杂问题。且兼容Valinehttps://github.com/xCss/Valine评论，打通PC端和移动端评论，特别适合使用Valine评论系统且想同时开发小程序文章评论的同学们" target="_blank" rel="noopener">https://github.com/yicm/NewWxComment是一个微信小程序的评论组件，结合BaaS提供商LeanCloud，无需其他另外的个人或者云服务器，就可以免费使用。解决了需要个人去注册域名、备案、购买云服务器的繁杂问题。且兼容Valinehttps://github.com/xCss/Valine评论，打通PC端和移动端评论，特别适合使用Valine评论系统且想同时开发小程序文章评论的同学们</a>.</p></blockquote><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul><li>独立插件，独立放入小程序项目即可使用</li><li>打通Valine评论系统，统一PC端和小程序端</li><li>友好的UI界面和交互界面</li><li>与微信用户信息绑定，显示微信用户头像和昵称</li><li>支持文章阅读量统计功能</li><li>支持评论回复功能，即子评论</li><li>支持emoji表情显示😉</li><li>支持评论分页加载</li><li>支持评论分页参数设置</li><li>内置获取微信用户公共信息授权</li><li>支持light/dark两种主题</li><li>机型兼容友好，包括全面屏iphone11等</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-          <category> 教程 </category>
-          
-          <category> 小程序 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教程 </tag>
-            
-            <tag> 推荐 </tag>
-            
-            <tag> 入门 </tag>
-            
-            <tag> 小程序 </tag>
-            
-            <tag> UI </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>小程序UI组件推荐</title>
       <link href="/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8FUI%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
       <url>/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8FUI%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
@@ -148,9 +111,46 @@
             
             <tag> 推荐 </tag>
             
+            <tag> 小程序 </tag>
+            
             <tag> 入门 </tag>
             
+            <tag> UI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>小程序功能组件推荐</title>
+      <link href="/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+      <url>/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>最近出于兴趣在做小程序的开发，所以找了很多“轮子”，大多数开源组件都不尽人意，这里挑出几个好用的分享一下。</p><h2 id="NewWxComment-为数不多的评论组件"><a href="#NewWxComment-为数不多的评论组件" class="headerlink" title="NewWxComment 为数不多的评论组件"></a>NewWxComment 为数不多的评论组件</h2><p><a href="https://github.com/yicm/NewWxComment" target="_blank" rel="noopener">仓库</a> | <a href="https://github.com/yicm" target="_blank" rel="noopener">作者</a></p><blockquote><p>NewWxComment<a href="https://github.com/yicm/NewWxComment是一个微信小程序的评论组件，结合BaaS提供商LeanCloud，无需其他另外的个人或者云服务器，就可以免费使用。解决了需要个人去注册域名、备案、购买云服务器的繁杂问题。且兼容Valinehttps://github.com/xCss/Valine评论，打通PC端和移动端评论，特别适合使用Valine评论系统且想同时开发小程序文章评论的同学们" target="_blank" rel="noopener">https://github.com/yicm/NewWxComment是一个微信小程序的评论组件，结合BaaS提供商LeanCloud，无需其他另外的个人或者云服务器，就可以免费使用。解决了需要个人去注册域名、备案、购买云服务器的繁杂问题。且兼容Valinehttps://github.com/xCss/Valine评论，打通PC端和移动端评论，特别适合使用Valine评论系统且想同时开发小程序文章评论的同学们</a>.</p></blockquote><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul><li>独立插件，独立放入小程序项目即可使用</li><li>打通Valine评论系统，统一PC端和小程序端</li><li>友好的UI界面和交互界面</li><li>与微信用户信息绑定，显示微信用户头像和昵称</li><li>支持文章阅读量统计功能</li><li>支持评论回复功能，即子评论</li><li>支持emoji表情显示😉</li><li>支持评论分页加载</li><li>支持评论分页参数设置</li><li>内置获取微信用户公共信息授权</li><li>支持light/dark两种主题</li><li>机型兼容友好，包括全面屏iphone11等</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 教程 </category>
+          
+          <category> 小程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 推荐 </tag>
+            
             <tag> 小程序 </tag>
+            
+            <tag> 入门 </tag>
             
             <tag> UI </tag>
             
@@ -181,11 +181,11 @@
       
         <tags>
             
-            <tag> 记事 </tag>
-            
             <tag> Hexo </tag>
             
             <tag> Web </tag>
+            
+            <tag> 记事 </tag>
             
         </tags>
       
@@ -204,13 +204,13 @@
       
         <tags>
             
-            <tag> 生活 </tag>
-            
             <tag> 教程 </tag>
             
             <tag> 推荐 </tag>
             
             <tag> 效率 </tag>
+            
+            <tag> 生活 </tag>
             
             <tag> 番茄工作法 </tag>
             
@@ -276,13 +276,13 @@
       
         <tags>
             
+            <tag> 入门 </tag>
+            
             <tag> CG </tag>
             
             <tag> 理论 </tag>
             
             <tag> Python </tag>
-            
-            <tag> 入门 </tag>
             
         </tags>
       
@@ -309,9 +309,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> 入门 </tag>
+            
+            <tag> Python </tag>
             
             <tag> numpy </tag>
             
