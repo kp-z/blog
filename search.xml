@@ -89,43 +89,6 @@
     
     
     <entry>
-      <title>小程序功能组件推荐</title>
-      <link href="/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-      <url>/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>最近出于兴趣在做小程序的开发，所以找了很多“轮子”，大多数开源组件都不尽人意，这里挑出几个好用的分享一下。</p><h2 id="NewWxComment-为数不多的评论组件"><a href="#NewWxComment-为数不多的评论组件" class="headerlink" title="NewWxComment 为数不多的评论组件"></a>NewWxComment 为数不多的评论组件</h2><p><a href="https://github.com/yicm/NewWxComment" target="_blank" rel="noopener">仓库</a> | <a href="https://github.com/yicm" target="_blank" rel="noopener">作者</a></p><blockquote><p>NewWxComment<a href="https://github.com/yicm/NewWxComment是一个微信小程序的评论组件，结合BaaS提供商LeanCloud，无需其他另外的个人或者云服务器，就可以免费使用。解决了需要个人去注册域名、备案、购买云服务器的繁杂问题。且兼容Valinehttps://github.com/xCss/Valine评论，打通PC端和移动端评论，特别适合使用Valine评论系统且想同时开发小程序文章评论的同学们" target="_blank" rel="noopener">https://github.com/yicm/NewWxComment是一个微信小程序的评论组件，结合BaaS提供商LeanCloud，无需其他另外的个人或者云服务器，就可以免费使用。解决了需要个人去注册域名、备案、购买云服务器的繁杂问题。且兼容Valinehttps://github.com/xCss/Valine评论，打通PC端和移动端评论，特别适合使用Valine评论系统且想同时开发小程序文章评论的同学们</a>.</p></blockquote><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul><li>独立插件，独立放入小程序项目即可使用</li><li>打通Valine评论系统，统一PC端和小程序端</li><li>友好的UI界面和交互界面</li><li>与微信用户信息绑定，显示微信用户头像和昵称</li><li>支持文章阅读量统计功能</li><li>支持评论回复功能，即子评论</li><li>支持emoji表情显示😉</li><li>支持评论分页加载</li><li>支持评论分页参数设置</li><li>内置获取微信用户公共信息授权</li><li>支持light/dark两种主题</li><li>机型兼容友好，包括全面屏iphone11等</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-          <category> 教程 </category>
-          
-          <category> 小程序 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 入门 </tag>
-            
-            <tag> 教程 </tag>
-            
-            <tag> 推荐 </tag>
-            
-            <tag> 小程序 </tag>
-            
-            <tag> UI </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>小程序UI组件推荐</title>
       <link href="/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8FUI%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
       <url>/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8FUI%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
@@ -148,9 +111,46 @@
             
             <tag> 入门 </tag>
             
+            <tag> 推荐 </tag>
+            
             <tag> 教程 </tag>
             
+            <tag> 小程序 </tag>
+            
+            <tag> UI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>小程序功能组件推荐</title>
+      <link href="/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+      <url>/2020/02/22/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>最近出于兴趣在做小程序的开发，所以找了很多“轮子”，大多数开源组件都不尽人意，这里挑出几个好用的分享一下。</p><h2 id="NewWxComment-为数不多的评论组件"><a href="#NewWxComment-为数不多的评论组件" class="headerlink" title="NewWxComment 为数不多的评论组件"></a>NewWxComment 为数不多的评论组件</h2><p><a href="https://github.com/yicm/NewWxComment" target="_blank" rel="noopener">仓库</a> | <a href="https://github.com/yicm" target="_blank" rel="noopener">作者</a></p><blockquote><p>NewWxComment<a href="https://github.com/yicm/NewWxComment是一个微信小程序的评论组件，结合BaaS提供商LeanCloud，无需其他另外的个人或者云服务器，就可以免费使用。解决了需要个人去注册域名、备案、购买云服务器的繁杂问题。且兼容Valinehttps://github.com/xCss/Valine评论，打通PC端和移动端评论，特别适合使用Valine评论系统且想同时开发小程序文章评论的同学们" target="_blank" rel="noopener">https://github.com/yicm/NewWxComment是一个微信小程序的评论组件，结合BaaS提供商LeanCloud，无需其他另外的个人或者云服务器，就可以免费使用。解决了需要个人去注册域名、备案、购买云服务器的繁杂问题。且兼容Valinehttps://github.com/xCss/Valine评论，打通PC端和移动端评论，特别适合使用Valine评论系统且想同时开发小程序文章评论的同学们</a>.</p></blockquote><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul><li>独立插件，独立放入小程序项目即可使用</li><li>打通Valine评论系统，统一PC端和小程序端</li><li>友好的UI界面和交互界面</li><li>与微信用户信息绑定，显示微信用户头像和昵称</li><li>支持文章阅读量统计功能</li><li>支持评论回复功能，即子评论</li><li>支持emoji表情显示😉</li><li>支持评论分页加载</li><li>支持评论分页参数设置</li><li>内置获取微信用户公共信息授权</li><li>支持light/dark两种主题</li><li>机型兼容友好，包括全面屏iphone11等</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 教程 </category>
+          
+          <category> 小程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 入门 </tag>
+            
             <tag> 推荐 </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> 小程序 </tag>
             
@@ -208,11 +208,11 @@
             
             <tag> 生活 </tag>
             
-            <tag> 教程 </tag>
-            
             <tag> 推荐 </tag>
             
             <tag> 效率 </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> 番茄工作法 </tag>
             
@@ -243,11 +243,11 @@
       
         <tags>
             
-            <tag> 推荐 </tag>
-            
             <tag> Mac </tag>
             
             <tag> 软件 </tag>
+            
+            <tag> 推荐 </tag>
             
             <tag> 效率 </tag>
             
@@ -408,9 +408,9 @@
             
             <tag> Web </tag>
             
-            <tag> 教程 </tag>
-            
             <tag> 推荐 </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       

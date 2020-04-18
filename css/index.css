@@ -2176,6 +2176,9 @@ blockquote footer cite:before {
 .weibo-dark {
   display: none;
 }
+.visitor-map-dark {
+  display: none;
+}
 .category-content ol,
 .category-content ul {
   margin-top: 0.4rem;
@@ -4657,9 +4660,6 @@ img {
 #vcomment button:hover {
   background-color: #ff7242;
 }
-#vcomment textarea {
-  background: url("/img/speak.png") 100% 100% no-repeat;
-}
 #vcomment .info {
   display: none;
 }
@@ -4972,6 +4972,12 @@ img {
 }
 [data-theme='dark'] .weibo-dark {
   display: block;
+}
+[data-theme='dark'] .visitor-map-dark {
+  display: block;
+}
+[data-theme='dark'] .visitor-map-light {
+  display: none;
 }
 [data-theme='dark'] #hexo-blog-encrypt label,
 [data-theme='dark'] #hexo-blog-encrypt input {
