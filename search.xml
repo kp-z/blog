@@ -35,35 +35,6 @@
     
     
     <entry>
-      <title>认知机器人：感知物体位置和形态</title>
-      <link href="/2020/04/16/%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%84%9F%E7%9F%A5%E7%89%A9%E4%BD%93%E4%BD%8D%E7%BD%AE%E5%92%8C%E7%8A%B6%E6%80%81/"/>
-      <url>/2020/04/16/%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%84%9F%E7%9F%A5%E7%89%A9%E4%BD%93%E4%BD%8D%E7%BD%AE%E5%92%8C%E7%8A%B6%E6%80%81/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote><p>参加学校实验课程做的机器人项目，在Ros系统上使用RealSense的RGB-D摄像头实时识别物体的位置和形态，提供pointcloud数据给系统，以便机器人后续操作。</p></blockquote><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-1.jpg"  alt="cg"></p><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-2.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-3.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-4.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-5.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-6.jpg"  alt="cg"></p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-7.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-8.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-9.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-10.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-11.jpg"  alt="cg"></p><h1 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-12.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-13.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-14.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-15.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-16.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-17.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-18.jpg"  alt="cg"></p><h1 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-19.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-20.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-21.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-22.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-23.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-24.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-25.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-26.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-27.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-28.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-29.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-30.jpg"  alt="cg"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 项目 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 项目 </tag>
-            
-            <tag> 机器人 </tag>
-            
-            <tag> Ros </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2020搬家记录</title>
       <link href="/2020/03/02/2020%E6%90%AC%E5%AE%B6%E8%AE%B0%E5%BD%95/"/>
       <url>/2020/03/02/2020%E6%90%AC%E5%AE%B6%E8%AE%B0%E5%BD%95/</url>
@@ -502,6 +473,35 @@
             <tag> 记事 </tag>
             
             <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>认知机器人：感知物体位置和形态</title>
+      <link href="/2018/09/16/%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%84%9F%E7%9F%A5%E7%89%A9%E4%BD%93%E4%BD%8D%E7%BD%AE%E5%92%8C%E7%8A%B6%E6%80%81/"/>
+      <url>/2018/09/16/%E8%AE%A4%E7%9F%A5%E6%9C%BA%E5%99%A8%E4%BA%BA%EF%BC%9A%E6%84%9F%E7%9F%A5%E7%89%A9%E4%BD%93%E4%BD%8D%E7%BD%AE%E5%92%8C%E7%8A%B6%E6%80%81/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote><p>参加学校实验课程做的机器人项目，在Ros系统上使用RealSense的RGB-D摄像头实时识别物体的位置和形态，提供pointcloud数据给系统，以便机器人后续操作。</p></blockquote><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-1.jpg"  alt="cg"></p><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-2.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-3.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-4.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-5.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-6.jpg"  alt="cg"></p><h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-7.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-8.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-9.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-10.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-11.jpg"  alt="cg"></p><h1 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-12.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-13.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-14.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-15.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-16.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-17.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-18.jpg"  alt="cg"></p><h1 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h1><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-19.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-20.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-21.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-22.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-23.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-24.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-25.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-26.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-27.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-28.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-29.jpg"  alt="cg"><br><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/cg_lab/cg_presentation_slides-30.jpg"  alt="cg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目 </tag>
+            
+            <tag> 机器人 </tag>
+            
+            <tag> Ros </tag>
             
         </tags>
       
