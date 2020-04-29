@@ -1860,38 +1860,10 @@ blockquote footer cite:before {
   fill: currentColor;
   overflow: hidden;
 }
-#about_content #card-video {
-  height: 100%;
-  width: 100%;
-  object-fit: fill;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-  box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-}
-#about_content .card-video-widget {
-  margin: 0rem 0.7rem;
-  width: calc(33% - 1.4rem);
-  height: 350px;
-  overflow: hidden;
-  border-radius: 8px;
-  background: #fff;
-  -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-  box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-}
-#about_content .card-video-widget:hover {
-  -webkit-box-shadow: 0 4px 12px 12px rgba(7,17,27,0.15);
-  box-shadow: 0 4px 12px 12px rgba(7,17,27,0.15);
-}
 #about_content .card-widget {
   margin: 0rem 0.7rem;
   width: calc(33% - 1.4rem);
-  height: 350px;
+  height: 18rem;
   overflow: hidden;
   border-radius: 8px;
   background: #fff;
@@ -1909,15 +1881,15 @@ blockquote footer cite:before {
   box-shadow: 0 4px 12px 12px rgba(7,17,27,0.15);
 }
 .card-container {
-  margin: 0rem 0.7rem;
+  margin: 0 0.7rem;
+  height: 18rem;
   width: calc(33% - 1.4rem);
-  height: 350px;
   border-radius: 8px;
   display: inline-block;
 }
 .card-widget-half {
   width: 100%;
-  height: 49%;
+  height: 8.7rem;
   overflow: hidden;
   border-radius: 8px;
   background: #fff;
@@ -1928,7 +1900,7 @@ blockquote footer cite:before {
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
   transition: all 0.3s;
-  display: inline-block;
+  margin-top: 0.5rem;
 }
 .card-widget-half:hover {
   -webkit-box-shadow: 0 4px 12px 12px rgba(7,17,27,0.15);
@@ -1936,7 +1908,7 @@ blockquote footer cite:before {
 }
 .card-widget-quarter {
   width: 49%;
-  height: 49%;
+  height: 8.7rem;
   overflow: hidden;
   border-radius: 8px;
   background: #fff;
@@ -2164,7 +2136,7 @@ blockquote footer cite:before {
   display: inline-block;
   float: right;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 900px) {
   #about_content .card-container,
   #about_content .card-widget {
     width: calc(100% - 1.4rem);
@@ -2182,13 +2154,34 @@ blockquote footer cite:before {
     width: calc(100% - 1.4rem);
     height: auto;
   }
-  #about_content .card-widget-quarter.card-announcement {
-    margin-top: 1em;
+  #about_content .card-widget,
+  #about_content .card-widget-half,
+  #about_content .card-widget-quarter,
+  #about_content .card-container {
+    margin-top: 2em;
+    margin-bottom: 0em;
   }
   #about_content {
     width: 100% !important;
     margin-top: 0;
     margin-bottom: 2rem;
+  }
+  .card-video-white {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+    box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+  }
+  .card-video-black {
+    display: none;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+    box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   }
 }
 #aside_content {
@@ -2310,18 +2303,7 @@ blockquote footer cite:before {
 }
 .card-announcement ul.grid {
   border: none;
-  display: -webkit-box;
-  display: -moz-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -o-box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: distribute;
   -moz-box-pack: distribute;
   -o-box-pack: distribute;
@@ -2336,7 +2318,6 @@ blockquote footer cite:before {
 .card-announcement .card-announ-a {
   text-decoration: none;
   text-align: center;
-  border-radius: 12px;
   margin: 10px 0;
   padding: 4px 8px;
   display: -webkit-box;
@@ -2511,7 +2492,7 @@ blockquote footer cite:before {
   display: inline-block;
   float: right;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 900px) {
   .fullwidth-layout-page,
   .layout_page {
     -webkit-box-orient: vertical;
@@ -5122,6 +5103,15 @@ img {
 }
 [data-theme='dark'] ::-webkit-scrollbar-thumb {
   background: #1f1f1f;
+}
+[data-theme='dark'] #about_content .card-video-black {
+  display: block;
+}
+[data-theme='dark'] #about_content .card-video-white {
+  display: none;
+}
+[data-theme='dark'] .skills li {
+  color: rgba(255,255,255,0.6);
 }
 [data-theme='dark'] #web_bg[data-type=color],
 [data-theme='dark'] #footer[data-type=color] {
