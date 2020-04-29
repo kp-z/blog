@@ -1,0 +1,96 @@
+
+
+/* ------ layout
+-----------------------------------------------*/
+
+#content {
+width:100%;
+height: auto;
+}
+
+.legend {
+float:right;
+width:15%;
+margin-right: 5%;
+}
+
+#content h1 {
+font-family:'Cabin Sketch', arial, serif;
+color:#919191;
+font-size:20px;
+margin-bottom:5px;
+text-align:right;
+display: none;
+}
+
+.skills {
+float:left;
+clear:both;
+width:100%;
+}
+
+.skills ul,
+.skills li {
+display:block;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.skills li {
+float:right;
+clear:both;
+padding:0 5px;
+height:15px;
+line-height:15px;
+color:#f5f5f5;
+margin-bottom:1px;
+font-size:18px;
+}
+
+.skills .jq {
+background:#97BE0D;
+}
+
+.skills .css {
+background:#D84F5F;
+}
+
+.skills .html {
+background:#88B8E6;
+}
+
+.skills .php {
+background:#BEDBE9;
+}
+
+.skills .sql {
+background:#bae7ff;
+}
+
+
+
+#diagram {
+float: left;
+width:60%;
+height:60%;
+margin-left: calc(40% - 160px);
+}
+
+.get {
+display:none;
+}
+
+
+/* ------ anchors
+-----------------------------------------------*/
+
+@media screen and (max-width: 1100px){
+.legend {
+    display: none;
+    }
+#diagram {
+    margin-left: calc(50% - 160px);
+    }
+}
+    
