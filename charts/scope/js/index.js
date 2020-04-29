@@ -16,11 +16,11 @@ var chart = AmCharts.makeChart("SmoothChart", {
 		"#0000CC",
 		"#DDDDDD",
 		"#999999",
-		"#999999",
+		"#333333",
 		"#990000"
 	],
 	"borderColor": "#B9B9B9",
-	"color": "#B9B9B9",
+	"color": "#d9d9d9",
 	"fontFamily": "Montserrat",
 	"fontSize": 10,
 	"handDrawScatter": 0,
@@ -33,14 +33,14 @@ var chart = AmCharts.makeChart("SmoothChart", {
 		"parseDates": false,
 		"position": "left",
 		"startOnAxis": true,
-		"axisAlpha": 0,
+		"axisAlpha": 0.5,
 		"axisColor": "#4B4F5E",
 		"fillColor": "#4B4F5E",
 		"firstDayOfWeek": 0,
 		"gridAlpha": 0,
 		"gridColor": "#4B4F5E",
 		"labelOffset": 2,
-		"minHorizontalGap": 40,
+		"minHorizontalGap": 68,
 		"minorGridAlpha": 0,
 		"minorGridEnabled": false,
 		"minVerticalGap": 40,
@@ -138,7 +138,7 @@ var chart = AmCharts.makeChart("SmoothChart", {
 	"allLabels": [],
 	"balloon": {
 		"borderColor": "#141414",
-		"borderThickness": 0,
+		"borderThickness": 1,
 		"color": "#FFFFFF",
 		"fillAlpha": 1,
 		"fillColor": "#141414"
@@ -151,15 +151,15 @@ var chart = AmCharts.makeChart("SmoothChart", {
 	"dataProvider": [
 		{
 			"date": "2001",
-			"column-1": 0,
-			"column-2": 0,
+			"column-1": 8,
+			"column-2": 5,
 			"column-3": 3
 		},
 		{
 			"date": "2002",
 			"column-1": 6,
 			"column-2": 7,
-			"column-3": "3"
+			"column-3": 3
 		},
 		{
 			"date": "2003",
@@ -171,13 +171,13 @@ var chart = AmCharts.makeChart("SmoothChart", {
 			"date": "2004",
 			"column-1": 4,
 			"column-2": 3,
-			"column-3": "1"
+			"column-3": 1
 		},
 		{
 			"date": "2005",
 			"column-1": 2,
 			"column-2": 1,
-			"column-3": "3"
+			"column-3": 3
 		},
 		{
 			"date": "2006",
