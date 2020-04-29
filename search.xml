@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>岛屿--个人网站博客搜集页</title>
+      <link href="/2020/04/29/%E5%B2%9B%E5%B1%BF-%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E5%8D%9A%E5%AE%A2%E6%90%9C%E9%9B%86%E9%A1%B5/"/>
+      <url>/2020/04/29/%E5%B2%9B%E5%B1%BF-%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E5%8D%9A%E5%AE%A2%E6%90%9C%E9%9B%86%E9%A1%B5/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="岛屿–个人站点博客收录"><a href="#岛屿–个人站点博客收录" class="headerlink" title="岛屿–个人站点博客收录"></a>岛屿–个人站点博客收录</h1><h2 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h2><p>建站更博有一段时间了,期间游历不少同学的博客,有十几岁已经可以玩转互联网技术的高中生,有而立之年在网上喋喋不休的中年男人,有记录爱情的小情侣,也有低调内敛的真极客,有写诗撰文的文学家,有记录瞬间的摄影师,有关注时事的法律工作者,有满屏都是二次元的中二青年,也有凡事都要极简的生活家,有设计师,有工程师,有艺术家,有研究员,有大学生,有初中生,有小码农,有大老板… …</p><p>通过建站的审美,深度文章,推荐的音乐,参与的项目等等个性化的内容,我了解的了许多有趣,有创造力,有深度的灵魂,也学到了很多知识,我觉得比起社交媒体上的只言片语,这样的社交模式能产生更有价值的交流.</p><p>其实建立一个优秀的个站是有一些技术门槛的,但是仍然有许许多多的人不甘局限于众互联网大厂的社交产品,选择了自己动手创建一个更自由,更灵活,更私人的网络空间来展示,记录与自己相关的东西,就像是现在最流行的游戏——动物森友会,大家都选择了搬到一个属于自己的岛屿上来慢慢构建自己的内容.</p><p><strong>于是我有了一个想法,制作一个个人站点的导航目录,收集各行各业有趣的人的个人博客,方便我自己查看,如果可能的话也帮助更多的人发现彼此，比起其他导航页这个导航页是真正以人为节点的导航，发现有趣的人的主页，增加流量，互相交流。</strong></p><p>取名字为 <a href="https://zkpeace.com/WebStackPage/cn/index.html">岛屿</a> 就是想暗示每个人的博客都是一个属于自己的小岛.</p><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/public/image-20200428010639810.png"  alt="image-20200428010639810"></p><p><img src="/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/public/image-20200428010714703.png"  alt="image-20200428010714703"></p><h2 id="欢迎更多的人留言入住"><a href="#欢迎更多的人留言入住" class="headerlink" title="欢迎更多的人留言入住"></a>欢迎更多的人留言入住</h2><p>可以在<a href="https://github.com/Uzizkp/uzizkp.github.io/issues/2" target="_blank" rel="noopener">ISSUE</a>中留言</p><p>也可以去<a href="https://zkpeace.com">我的博客</a>互换友链</p><h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><p>UI design by <a href="http://viggoz.com/" target="_blank" rel="noopener"><strong>@Viggo</strong></a> modified by <a href="http://zkpeace.com/about"><strong>@Kp</strong></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目 </category>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目 </tag>
+            
+            <tag> 网站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据可视化：把玩一下seaborn(一)</title>
       <link href="/2020/04/23/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E6%8A%8A%E7%8E%A9%E4%B8%80%E4%B8%8Bseaborn-%E4%B8%80/"/>
       <url>/2020/04/23/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E6%8A%8A%E7%8E%A9%E4%B8%80%E4%B8%8Bseaborn-%E4%B8%80/</url>
@@ -53,6 +82,8 @@
       <categories>
           
           <category> 项目 </category>
+          
+          <category> 机器人 </category>
           
       </categories>
       
@@ -111,6 +142,8 @@
       <categories>
           
           <category> 项目 </category>
+          
+          <category> 前端 </category>
           
       </categories>
       
@@ -536,6 +569,8 @@
       <categories>
           
           <category> 项目 </category>
+          
+          <category> 机器人 </category>
           
       </categories>
       

@@ -1,13 +1,5 @@
 
 
-/* ------ layout
------------------------------------------------*/
-
-#content {
-width:100%;
-height: auto;
-}
-
 .legend {
 float:right;
 width:15%;
@@ -43,7 +35,7 @@ clear:both;
 padding:0 5px;
 height:15px;
 line-height:15px;
-color:#f5f5f5;
+color:#fff;
 margin-bottom:1px;
 font-size:18px;
 }
@@ -71,7 +63,6 @@ background:#bae7ff;
 
 
 #diagram {
-float: left;
 width:60%;
 height:60%;
 margin-left: calc(40% - 160px);
@@ -81,9 +72,6 @@ margin-left: calc(40% - 160px);
 display:none;
 }
 
-
-/* ------ anchors
------------------------------------------------*/
 
 @media screen and (max-width: 1100px){
 .legend {

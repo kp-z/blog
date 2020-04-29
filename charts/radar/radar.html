@@ -1,47 +1,41 @@
-<head>
-<meta name="generator" content="Hexo 4.2.0"></head>
-<body>
-	<div class="htmleaf-container">
-		<div class="htmleaf-content">
-			<div style="margin:0 auto;">
-				<canvas id="canvas" height="150px" width=auto></canvas>
-			</div>
+
+<div class="htmleaf-container">
+	<div class="htmleaf-content">
+		<div style="margin:0 auto;">
+			<canvas id="canvas" height="150px" width=auto></canvas>
 		</div>
 	</div>
-	
-	<script src="../charts/radar/js/Chart.js"></script>
-	<script>
-	var radarChartData = {
-		labels: ["Runing", "Coding", "Reading", "Designing", "Sleeping", "Cycling", "Eating"],
-		datasets: [
-			{
-				label: "My First dataset",
-				fillColor: "rgba(220,220,220,0.2)",
-				strokeColor: "rgba(220,220,220,1)",
-				pointColor: "rgba(220,220,220,1)",
-				pointStrokeColor: "#f3f3f3",
-				pointHighlightFill: "#f3f3f3",
-				pointHighlightStroke: "rgba(220,220,220,1)",
-				data: [65,59,90,81,56,55,40]
-			},
-			{
-				label: "My Second dataset",
-				fillColor: "rgba(151,187,205,0.2)",
-				strokeColor: "rgba(151,187,205,1)",
-				pointColor: "rgba(151,187,205,1)",
-				pointStrokeColor: "#f3f3f3",
-				pointHighlightFill: "#f3f3f3",
-				pointHighlightStroke: "rgba(151,187,205,1)",
-				data: [28,48,40,19,96,27,100]
-			}
-		]
-	};
+</div>
+<script>
+var radarChartData = {
+	labels: ["Runing", "Coding", "Reading", "Designing", "Sleeping", "Cycling", "Eating"],
+	datasets: [
+		{
+			label: "My First dataset",
+			fillColor: "rgba(220,220,220,0.2)",
+			strokeColor: "rgba(220,220,220,1)",
+			pointColor: "rgba(220,220,220,1)",
+			pointStrokeColor: "#f3f3f3",
+			pointHighlightFill: "#f3f3f3",
+			pointHighlightStroke: "rgba(220,220,220,1)",
+			data: [65,59,90,81,56,55,40]
+		},
+		{
+			label: "My Second dataset",
+			fillColor: "rgba(151,187,205,0.2)",
+			strokeColor: "rgba(151,187,205,1)",
+			pointColor: "rgba(151,187,205,1)",
+			pointStrokeColor: "#f3f3f3",
+			pointHighlightFill: "#f3f3f3",
+			pointHighlightStroke: "rgba(151,187,205,1)",
+			data: [28,48,40,19,96,27,100]
+		}
+	]
+};
 
-	window.onload = function(){
-		window.myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData, {
-			responsive: true
-		});
-	}
-	</script>
-<script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BE4FjazEy0hO4aZn1CSyLYlA69uCbOsmJn2x9ol0yRdFncC-3xweXGguOidGbwI4jkcWmAqXjPW9zNW6DTeckXI');</script></body>
-</html>
+window.onload = function(){
+	window.myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData, {
+		responsive: true
+	});
+}
+</script>
