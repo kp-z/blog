@@ -18,6 +18,7 @@ $(function () {
   });
     var chart = new Highcharts.Chart({
       chart: {
+          backgroundColor: '',
           type: 'areaspline',
           zoomType: 'x',
           renderTo: 'areaChart'
@@ -67,10 +68,10 @@ $(function () {
         padding:1,
         style:{
           color: '#bfbfbf',
-          fontSize: '10px'
+          fontSize: '7px'
         }
       },
-      width: '3px'
+      width: '1px'
     },
 
     tooltip: {
