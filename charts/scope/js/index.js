@@ -32,7 +32,8 @@ var chart = AmCharts.makeChart("SmoothChart", {
 		"minPeriod": "YYYY",
 		"parseDates": false,
 		"position": "left",
-		"startOnAxis": true,
+		"rotation": 0,
+		"startOnAxis": false,
 		"axisAlpha": 0.5,
 		"axisColor": "#4B4F5E",
 		"fillColor": "#4B4F5E",
@@ -47,20 +48,20 @@ var chart = AmCharts.makeChart("SmoothChart", {
 		"titleFontSize": 0
 	},
 	"chartCursor": {
-		"enabled": true,
+		"enabled": false,
 		"categoryBalloonDateFormat": "YYYY",
 		"cursorAlpha": 0,
 		"cursorColor": "#191919",
-		"fullWidth": true,
-		"oneBalloonOnly": true,
+		"fullWidth": false,
+		"oneBalloonOnly": false,
 		"valueLineAlpha": 0.47,
-		"valueLineBalloonEnabled": true,
-		"valueLineEnabled": true,
-		"valueZoomable": true
+		"valueLineBalloonEnabled": false,
+		"valueLineEnabled": false,
+		"valueZoomable": false
 	},
 	"chartScrollbar": {
 		"enabled": false,
-		"autoGridCount": true,
+		"autoGridCount": false,
 		"backgroundAlpha": 0,
 		"color": "#888888",
 		"graph": "g1",
@@ -145,7 +146,7 @@ var chart = AmCharts.makeChart("SmoothChart", {
 	},
 	"legend": {
 		"enabled": false,
-		"useGraphSettings": true
+		"useGraphSettings": false
 	},
 	"titles": [],
 	"dataProvider": [
