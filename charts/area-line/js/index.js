@@ -14,7 +14,7 @@ $(function () {
   }
   
   Highcharts.setOptions({
-    colors: ['#f47961', '#60be7b', '#4b5d69', '#9fdbea']
+    colors: ['#9fdbea','#f47961','#7ed321','#60be7b',]
   });
     var chart = new Highcharts.Chart({
       chart: {
@@ -65,13 +65,15 @@ $(function () {
         text: null
       },
       labels: {
-        padding:1,
+        padding:0,
+        enabled: false,
         style:{
           color: '#bfbfbf',
-          fontSize: '7px'
+          fontSize: '7px',
+
         }
       },
-      width: '1px'
+      width: '10px'
     },
 
     tooltip: {

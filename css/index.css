@@ -1942,9 +1942,8 @@ blockquote footer cite:before {
 }
 .card-info img {
   display: inline-block;
-  width: 110px;
   height: 110px;
-  border-radius: 70px;
+  border-radius: 110px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -1960,10 +1959,10 @@ blockquote footer cite:before {
 }
 .card-info .author-info__name {
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .card-info .author-info__description {
-  margin-top: -0.3rem;
+  margin-top: 0;
 }
 .card-info .card-info-data {
   padding: 0.7rem 0;
@@ -1986,10 +1985,10 @@ blockquote footer cite:before {
   font-size: 1rem;
 }
 .card-info .card-info-social-icons {
-  margin: 0.3rem 0 -0.3rem;
+  margin: 0 0.5rem 30rem 0;
 }
 .card-info .card-info-social-icons .social-icon {
-  margin: 0 0.5rem;
+  margin: 0 0.5rem 30rem 0.5rem;
   color: #4c4948;
   font-size: 1rem;
   cursor: pointer;
@@ -2168,6 +2167,9 @@ blockquote footer cite:before {
   #about_content .card-video-widget {
     width: calc(100% - 1.4rem);
     height: auto;
+  }
+  #about_content .card-info {
+    height: 18rem;
   }
   #about_content .card-widget,
   #about_content .card-widget-half,
