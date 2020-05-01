@@ -5244,6 +5244,12 @@ img {
 [data-theme='dark'] .gist {
   filter: brightness(0.7);
 }
+[data-theme='dark'] .player {
+  background: #1d1d1e;
+}
+[data-theme='dark'] .player-controls__item.-xl {
+  color: #d9d9d9;
+}
 [data-theme='dark'] #about_content .card-video,
 [data-theme='dark'] #aside_content .card-video,
 [data-theme='dark'] #about_content .card-widget-half,
