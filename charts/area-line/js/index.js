@@ -98,7 +98,7 @@ $(function () {
       name: '发财概率',
       data: random_numbers()
     }, {
-      name: '加薪概率',
+      name: '及格概率',
       data: random_numbers()
     }, {
       name: '踩狗屎概率',

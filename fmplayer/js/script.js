@@ -17,11 +17,19 @@ new Vue({
       isTimerPlaying: false,
       tracks: [
         {
+          name: "好像爱这个世界",
+          artist: "华晨宇",
+          cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/maxresdefault.jpg",
+          source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E5%A5%BD%E6%83%B3%E7%88%B1%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E5%95%8A%20-%20%E5%8D%8E%E6%99%A8%E5%AE%87.mp3",
+          url: "https://music.163.com/song?id=1407358755&userid=15433008",
+          favorited: true
+        },
+        {
           name: "没有理想的人不伤心 (Remix版)",
           artist: "新裤子",
           cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/f0250c6a9b4f4134baabdaa7a40312d4.jpeg",
           source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E6%B2%A1%E6%9C%89%E7%90%86%E6%83%B3%E7%9A%84%E4%BA%BA%E4%B8%8D%E4%BC%A4%E5%BF%83%20%28Remix%E7%89%88%29%20-%20%E6%96%B0%E8%A3%A4%E5%AD%90.mp3",
-          url: "",
+          url: "https://music.163.com/song?id=1305364671&userid=15433008",
           favorited: false
         },
         {
@@ -29,7 +37,7 @@ new Vue({
           artist: "谢村花",
           cover: "../../fmplayer/img/2.jpg",
           source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E8%B0%A2%E6%98%A5%E8%8A%B1-%E8%8D%92%E5%B2%9B.mp3",
-          url: "",
+          url: "https://music.163.com/song?id=412319476&userid=15433008",
           favorited: false
         },
         {
