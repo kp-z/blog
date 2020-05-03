@@ -1833,8 +1833,6 @@ blockquote footer cite:before {
 }
 #about_content {
   width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
 }
 #about_content .card-widget:not(:first-child) {
   margin-top: 1rem;
@@ -2717,6 +2715,7 @@ blockquote footer cite:before {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  margin-top: 15%;
 }
 #footer-wrap {
   position: relative;
@@ -2912,7 +2911,6 @@ figure.gallery-group .gallery-group-name:after {
 #nav {
   position: relative;
   width: 100%;
-  background-color: #6ab6cf;
   background-attachment: local;
   background-position: center center;
   -webkit-background-size: cover;
@@ -2937,7 +2935,7 @@ figure.gallery-group .gallery-group-name:after {
 #nav #site_title,
 #nav #site_subtitle,
 #nav #scroll_down .scroll-down-effects {
-  color: #eee;
+  color: #fff;
   text-align: center;
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
   line-height: 1.5;
@@ -2974,13 +2972,17 @@ figure.gallery-group .gallery-group-name:after {
   font-size: 30px;
 }
 #nav.not-index-bg {
-  height: 20rem;
+  height: 8rem;
 }
 #nav #page_site-info {
   position: absolute;
-  top: 10rem;
+  top: 1rem;
   padding: 0 0.5rem;
   width: 100%;
+}
+#nav #page_site-info #site_title {
+  margin: 0;
+  font-size: 1rem;
 }
 #nav.post-bg {
   height: 20rem;
@@ -3077,7 +3079,7 @@ figure.gallery-group .gallery-group-name:after {
   font-size: inherit;
 }
 #page-header a {
-  color: #eee;
+  color: #fff;
 }
 #page-header a:hover {
   color: #fff;
@@ -3183,8 +3185,8 @@ figure.gallery-group .gallery-group-name:after {
   padding: 0;
   width: max-content;
   background-color: rgba(255,255,255,0.8);
-  -webkit-box-shadow: 0 5px 20px -4px rgba(0,0,0,0.5);
-  box-shadow: 0 5px 20px -4px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 5px 20px -4px #000;
+  box-shadow: 0 5px 20px -4px #000;
   -webkit-animation: sub_menus 0.3s 0.1s ease both;
   -moz-animation: sub_menus 0.3s 0.1s ease both;
   -o-animation: sub_menus 0.3s 0.1s ease both;
@@ -3238,10 +3240,10 @@ figure.gallery-group .gallery-group-name:after {
     display: block;
   }
   #nav.not-index-bg {
-    height: 14rem;
+    height: 5rem;
   }
   #nav #page_site-info {
-    top: 7rem;
+    top: 0.7rem;
   }
   #nav.post-bg {
     height: 18rem;
@@ -3548,7 +3550,7 @@ figure.gallery-group .gallery-group-name:after {
   -webkit-align-items: flex-start;
   align-items: flex-start;
   margin: 0 auto;
-  padding: 2rem 15px;
+  padding: 1rem 15px;
   max-width: 1200px;
 }
 .fullwidth-layout-page {
@@ -3559,7 +3561,7 @@ figure.gallery-group .gallery-group-name:after {
   -webkit-align-items: flex-start;
   align-items: flex-start;
   margin: 0 auto;
-  padding: 2rem 15px;
+  padding: 1rem 15px;
   max-width: 1900px;
 }
 #recent-posts {
