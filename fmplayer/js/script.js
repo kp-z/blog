@@ -16,8 +16,17 @@ new Vue({
       currentTime: null,
       isTimerPlaying: false,
       tracks: [
+        
         {
-          name: "好像爱这个世界",
+          name: "给你给我",
+          artist: "毛不易",
+          cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/109951163352188380.jpg",
+          source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E7%BB%99%E4%BD%A0%E7%BB%99%E6%88%91%20-%20%E6%AF%9B%E4%B8%8D%E6%98%93.mp3",
+          url: "https://music.163.com/song?id=1407358755&userid=15433008",
+          favorited: true
+        },
+        {
+          name: "好想爱这个世界",
           artist: "华晨宇",
           cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/maxresdefault.jpg",
           source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E5%A5%BD%E6%83%B3%E7%88%B1%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E5%95%8A%20-%20%E5%8D%8E%E6%99%A8%E5%AE%87.mp3",
