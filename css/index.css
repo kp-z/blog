@@ -2937,7 +2937,7 @@ figure.gallery-group .gallery-group-name:after {
 #nav #scroll_down .scroll-down-effects {
   color: #fff;
   text-align: center;
-  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.6);
   line-height: 1.5;
 }
 #nav #site_title {
@@ -3082,7 +3082,7 @@ figure.gallery-group .gallery-group-name:after {
   color: #fff;
 }
 #page-header a:hover {
-  color: #fff;
+  color: $light-white;
 }
 #page-header.fixed {
   position: fixed;
@@ -3124,7 +3124,7 @@ figure.gallery-group .gallery-group-name:after {
   background-color: #fff !important;
 }
 #page-header #site-name {
-  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.6);
   font-weight: bold;
   cursor: pointer;
 }
@@ -3220,7 +3220,7 @@ figure.gallery-group .gallery-group-name:after {
 #page-header .site-page {
   position: relative;
   padding-bottom: 0.3rem;
-  text-shadow: 0.05rem 0.05rem 0.1rem rgba(0,0,0,0.3);
+  text-shadow: 0.05rem 0.05rem 0.1rem rgba(0,0,0,0.6);
   font-size: 0.7rem;
   cursor: pointer;
 }
@@ -3229,7 +3229,7 @@ figure.gallery-group .gallery-group-name:after {
     font-size: 2rem;
   }
   #nav #site_subtitle {
-    font-size: 1.2rem;
+    font-size: 1.2remx;
   }
 }
 @media screen and (max-width: 768px) {
