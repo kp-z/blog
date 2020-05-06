@@ -2976,7 +2976,7 @@ figure.gallery-group .gallery-group-name:after {
 }
 #nav #page_site-info {
   position: absolute;
-  top: 1rem;
+  top: 0.7rem;
   padding: 0 0.5rem;
   width: 100%;
 }
@@ -3243,7 +3243,7 @@ figure.gallery-group .gallery-group-name:after {
     height: 5rem;
   }
   #nav #page_site-info {
-    top: 0.7rem;
+    top: 3rem;
   }
   #nav.post-bg {
     height: 18rem;
@@ -5105,6 +5105,9 @@ img {
   color: rgba(255,255,255,0.6);
 }
 [data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+}
+[data-theme='dark'] .card {
   background: #1f1f1f;
 }
 [data-theme='dark'] #about_content .card-video-black {
