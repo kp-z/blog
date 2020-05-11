@@ -1844,6 +1844,7 @@ blockquote footer cite:before {
 #about_content .card-video-white {
   height: 100%;
   width: 100%;
+  object-fit: fill;
   border-radius: 8px;
   -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
@@ -1852,6 +1853,7 @@ blockquote footer cite:before {
   display: none;
   height: 100%;
   width: 100%;
+  object-fit: fill;
   border-radius: 8px;
   -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
