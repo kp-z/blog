@@ -4,11 +4,50 @@
   
     
     <entry>
+      <title>数据可视化：把玩一下seaborn(二)</title>
+      <link href="/blog/2020/05/22/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E6%8A%8A%E7%8E%A9%E4%B8%80%E4%B8%8Bseaborn-%E4%BA%8C/"/>
+      <url>/blog/2020/05/22/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E6%8A%8A%E7%8E%A9%E4%B8%80%E4%B8%8Bseaborn-%E4%BA%8C/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/blog/assets/css/APlayer.min.css"><script src="/blog/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/blog/assets/js/Meting.min.js"></script><blockquote><p>著名写博客“有一无二”表演艺术家👨‍🎨,终于要出一次“二”了.</p><p>另附上收集的seaborn速查表:<a href="https://zkpeace.com/wiki/seaborn">seaborn cheatsheet</a></p></blockquote><p>接上一篇文章<a href="[https://zkpeace.com/2020/04/23/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E6%8A%8A%E7%8E%A9%E4%B8%80%E4%B8%8Bseaborn-%E4%B8%80/#%E6%95%A3%E7%82%B9%E5%9B%BE-Scatter-plots](https://zkpeace.com/2020/04/23/数据可视化：把玩一下seaborn-一/#散点图-Scatter-plots)">数据可视化：把玩一下seaborn(二)</a></p><p>重申一下引入类库和环境:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line">sns.set(color_codes=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure><p>上回书说完了seaborn按照数据类别或者数据统计关系进行可视化的基本方法,这次主要聊一聊想要展现数据分布和线性关系时应该如何操作.</p><p>然后介绍一下数据线性关系的可视化方法</p><h2 id="数据分布的可视化-Visualizing-the-distribution-of-a-dataset"><a href="#数据分布的可视化-Visualizing-the-distribution-of-a-dataset" class="headerlink" title="数据分布的可视化 Visualizing the distribution of a dataset"></a>数据分布的可视化 Visualizing the distribution of a dataset</h2><p>拿到数据集后,通常第一件事就是确定数据的分布,接下来我们看一下对于单变量(unvariable)和双变量(bivariable)分布如何进行可视化.</p><h3 id="绘制单变量分布图-Ploting-univariate-distributions"><a href="#绘制单变量分布图-Ploting-univariate-distributions" class="headerlink" title="绘制单变量分布图 Ploting univariate distributions"></a>绘制单变量分布图 Ploting univariate distributions</h3><p>单变量分布的常见可视化模式是<a href="https://en.wikipedia.org/wiki/Histogram" target="_blank" rel="noopener">直方图(histogram)</a>或者<a href="https://en.wikipedia.org/wiki/Kernel_density_estimation" target="_blank" rel="noopener">KDA(kernel debsity estimate)</a>,在seaborn中使用的方法是<code>displot()</code>, 其中的<code>hist</code>属性控制是否显示直方图(默认开启),<code>kda</code>属性控制是否显示KDA分布(默认开启),<code>rug</code>属性控制显示刻度(默认关闭)</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.random.normal(size=<span class="number">100</span>)</span><br><span class="line">sns.distplot(x,hist=<span class="literal">True</span>,kde=<span class="literal">True</span>, rug=<span class="literal">True</span>);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200509152156.png"  alt=""></p><p>直方图没什么说的,是观察数据分布常见且直观的一个方法,原理也比较简单. 这里重点说一下KDE,它本身在很多领域都是极其重要的工具. 绘制kde图还可以使用<code>kdeplot()</code>方法或者<code>rugplot()</code>方法,例如下面的例子</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = np.random.normal(<span class="number">0</span>, <span class="number">1</span>, size=<span class="number">30</span>)</span><br><span class="line">sns.kdeplot(x)</span><br><span class="line">sns.kdeplot(x, shade=<span class="literal">True</span>, bw=<span class="number">.2</span>,  label=<span class="string">"bw: .2"</span>); <span class="comment"># shade属性控制是否显示分布区域阴影</span></span><br><span class="line">sns.kdeplot(x, bw=<span class="number">2</span>, label=<span class="string">"bw: 2"</span>) </span><br><span class="line">plt.legend();</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200509155616.png"  alt=""></p><p>从图中可以看出,<code>bw</code>属性控制的是kde曲线的拟合程度.</p><h3 id="绘制双变量分布图-Ploting-bivariate-distributions"><a href="#绘制双变量分布图-Ploting-bivariate-distributions" class="headerlink" title="绘制双变量分布图 Ploting bivariate distributions"></a>绘制双变量分布图 Ploting bivariate distributions</h3><p>首先我们创建一个数据集作为例子</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mean, cov = [<span class="number">0</span>, <span class="number">1</span>], [(<span class="number">1</span>, <span class="number">.5</span>), (<span class="number">.5</span>, <span class="number">1</span>)]</span><br><span class="line">data = np.random.multivariate_normal(mean, cov, <span class="number">200</span>)</span><br><span class="line">df = pd.DataFrame(data, columns=[<span class="string">"x"</span>, <span class="string">"y"</span>])</span><br></pre></td></tr></table></figure><p>绘制双变量分布图的方法是<code>jointplot()</code>,用多个面板从两个维度绘制数据分布,seaborn提供了<code>scatterplot(defult)</code>,<code>hexbin</code>,<code>kde</code>三种样式</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.jointplot(x=<span class="string">"x"</span>, y=<span class="string">"y"</span>, data=df);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://seaborn.pydata.org/_images/distributions_32_0.png"  alt=""></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x, y = np.random.multivariate_normal(mean, cov, <span class="number">1000</span>).T</span><br><span class="line"><span class="keyword">with</span> sns.axes_style(<span class="string">"white"</span>):</span><br><span class="line">    sns.jointplot(x=x, y=y, kind=<span class="string">"hex"</span>, color=<span class="string">"k"</span>);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://seaborn.pydata.org/_images/distributions_30_0.png"  alt=""></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.jointplot(x&#x3D;&quot;x&quot;, y&#x3D;&quot;y&quot;, data&#x3D;df, kind&#x3D;&quot;kde&quot;);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://seaborn.pydata.org/_images/distributions_32_0.png"  alt=""></p><p>其实<code>kdeplot()</code>也可以实现kde双变量分布</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f, ax = plt.subplots(figsize=(<span class="number">6</span>, <span class="number">6</span>)) <span class="comment"># 设置显示图形的大小</span></span><br><span class="line">sns.kdeplot(df.x, df.y, ax=ax)</span><br><span class="line">sns.rugplot(df.x, color=<span class="string">"g"</span>, ax=ax)</span><br><span class="line">sns.rugplot(df.y, vertical=<span class="literal">True</span>, ax=ax);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://seaborn.pydata.org/_images/distributions_34_0.png"  alt=""></p><h3 id="可视化数据集中的成对关系-Visualizing-pairwise-relationships-in-a-dataset"><a href="#可视化数据集中的成对关系-Visualizing-pairwise-relationships-in-a-dataset" class="headerlink" title="可视化数据集中的成对关系 Visualizing pairwise relationships in a dataset"></a>可视化数据集中的成对关系 Visualizing pairwise relationships in a dataset</h3><p>例如调用数据集<code>iris</code>(鸢尾属植物)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iris &#x3D; sns.load_dataset(&quot;iris&quot;)</span><br></pre></td></tr></table></figure><p>然后使用<code>pairplot()</code>方法</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.pairplot(iris, hue&#x3D;&quot;species&quot;);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://seaborn.pydata.org/_images/distributions_42_0.png"  alt=""></p><p>解读一下这个图,根据坐标轴上的四个属性<code>sepal_width</code> <code>sepa_height</code>和<code>petal_length</code> <code>petal_width</code>的对应关系,用一个4*4 的矩阵展示了不同条件下三个物种的分布情况.</p><h1 id="线性关系的可视化-Visualizing-linear-relationships"><a href="#线性关系的可视化-Visualizing-linear-relationships" class="headerlink" title="线性关系的可视化 Visualizing linear relationships"></a>线性关系的可视化 Visualizing linear relationships</h1><p>线性回归模型在数据可视化中可以展示数据的分布和趋势,也可以起到预测数据的作用.</p><p>我们还是使用小费<code>tips</code>数据集</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tips = sns.load_dataset(<span class="string">"tips"</span>)</span><br></pre></td></tr></table></figure><h3 id="画线性回归模型的方法-Functions-to-draw-linear-regression-models"><a href="#画线性回归模型的方法-Functions-to-draw-linear-regression-models" class="headerlink" title="画线性回归模型的方法 Functions to draw linear regression models"></a>画线性回归模型的方法 Functions to draw linear regression models</h3><p>seaborn提供了两个方法<code>regplot()</code>和<code>lmplot()</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.regplot(x&#x3D;&quot;total_bill&quot;, y&#x3D;&quot;tip&quot;, data&#x3D;tips);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://seaborn.pydata.org/_images/regression_7_0.png"  alt=""></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.lmplot(x&#x3D;&quot;total_bill&quot;, y&#x3D;&quot;tip&quot;, data&#x3D;tips);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://seaborn.pydata.org/_images/regression_8_0.png"  alt=""></p><p>通过上面两个例子 ,会发现这两个方法绘制的结果区别不大,但是他们传入的数据是有区别的</p><p><code>regplot()</code> 的<code>x</code>和<code>y</code>轴可以是简单的<code>numpy</code>数组,pandas<code>series</code>对象或者pandas<code>DataFrame</code>对象</p><p><code>lmplot()</code>的x,y参数必须指定为字符串</p><h3 id="拟合不同种类的数据-Fitting-different-kinds-of-models"><a href="#拟合不同种类的数据-Fitting-different-kinds-of-models" class="headerlink" title="拟合不同种类的数据 Fitting different kinds of models"></a>拟合不同种类的数据 Fitting different kinds of models</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anscombe &#x3D; sns.load_dataset(&quot;anscombe&quot;)</span><br></pre></td></tr></table></figure><p>以数据集<a href="[https://zh.wikipedia.org/wiki/%E5%AE%89%E6%96%AF%E5%BA%93%E5%A7%86%E5%9B%9B%E9%87%8D%E5%A5%8F](https://zh.wikipedia.org/wiki/安斯库姆四重奏)">Anscombe’s quartet</a>(安斯库姆四重奏)为例,先通过下面的表格简单了解一下这个数据集,简单是说就是四组包含&lt;x,y&gt;的数据集:</p><p><img src="/blog/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200509180836.png"  alt="">、</p><p>然后plot一下四组数据(注意这里使用lmplot,所以x,y轴对应的是字符串),基本工作流程是使用数据集和用于构造网格的变量初始化<a href="https://seaborn.pydata.org/generated/seaborn.FacetGrid.html#seaborn.FacetGrid" target="_blank" rel="noopener">FacetGrid</a>对象。:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sns.lmplot(x=<span class="string">"x"</span>, y=<span class="string">"y"</span>, col=<span class="string">"dataset"</span>, col_wrap=<span class="number">2</span>, data=anscombe,</span><br><span class="line">           ci=<span class="literal">None</span>,scatter_kws=&#123;<span class="string">"s"</span>: <span class="number">80</span>&#125;);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200520132557.png"  alt=""></p><p>现在分析一下这四个数据集,第一个没啥显著特征,观察第二个数据集可以发现它存在高阶关系,可以通过<code>order</code>属性控制阶数,进行多项式回归拟合</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sns.lmplot(x&#x3D;&quot;x&quot;, y&#x3D;&quot;y&quot;, data&#x3D;anscombe.query(&quot;dataset &#x3D;&#x3D; &#39;II&#39;&quot;),</span><br><span class="line">           order&#x3D;2, ci&#x3D;None, scatter_kws&#x3D;&#123;&quot;s&quot;: 80&#125;);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200520133151.png"  alt=""></p><p>第三个数据集存在一个噪点outlier影响了拟合效果,可以使用<code>roboust</code>属性保持健壮性</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sns.lmplot(x=<span class="string">"x"</span>, y=<span class="string">"y"</span>, data=anscombe.query(<span class="string">"dataset == 'III'"</span>),</span><br><span class="line">           robust=<span class="literal">True</span>, ci=<span class="literal">None</span>, scatter_kws=&#123;<span class="string">"s"</span>: <span class="number">80</span>&#125;);</span><br></pre></td></tr></table></figure><p><img src="/blog/" class="lazyload" data-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200520134105.png"  alt=""></p><p>未完待续… …</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+          <category> 笔记 </category>
+          
+          <category> Python </category>
+          
+          <category> seaborn </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> 入门 </tag>
+            
+            <tag> 数据可视化 </tag>
+            
+            <tag> seaborn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>超想吐槽的APPs</title>
       <link href="/blog/2020/05/14/%E8%B6%85%E6%83%B3%E5%90%90%E6%A7%BD%E7%9A%84APPs/"/>
       <url>/blog/2020/05/14/%E8%B6%85%E6%83%B3%E5%90%90%E6%A7%BD%E7%9A%84APPs/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/blog/assets/css/APlayer.min.css"><script src="/blog/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/blog/assets/js/Meting.min.js"></script><p>现在越来越讨厌“超级APP”了.</p><p>最近几年真的明显的感觉到各个领域的专业App开始走上超级App的道路,什么微信生态,支付宝生态等等应用内生态,facebook生态逐渐建立起来,为了让用户多停留一会,加了巨多的功能和接口,部分内容完全偏离app本来的类型,,尤其是国内各种大厂,真的是啥都往里面放,从不做减法.我在使用这种app的感觉是从最初的期待,到赞赏,再到疲惫,再到现在的恶心.下面想挑出几个自己使用比较多的app说一下,屁股决定脑袋,纯属个人使用观点.</p><h4 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h4><p>微信现在真的是APP当中当之无愧的巨无霸,本来只是一款简单的社交软件,刚开始也是凭借易用,成熟的产品逻辑火遍中国,后来开始硬塞各种入口,什么游戏圈,搜一搜,看一看,视频号乱七八糟的,都是些咨询类的功能,特别容易分散注意力.还有现在很火的微信小程序(虽然我也是小程序开发者),虽然分享各种工具确实方便了不少,但是我总觉着这种快应用对用户来说放在Android和ios这种系统层的来做更合适,否则还要打开微信使用,略微有些麻烦,更何况微信的本行还没整明白,微信群连个头像都不能改,安全方面更不用说了,毫无隐私,微信群超过一定人数就可以被查房,所以弄这些花里胡哨的对我个人来说全是累赘,没有实质改进,我也确实能屏蔽的全都屏蔽了.所以现在我准备逐渐放弃使用微信,转到telegram这种功能明确专一的地方,当然完全放弃微信是不可能的,尽量吧,反正平常聊天的朋友也没多少,慢慢把他们“劝”过来.</p><h4 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h4><p>一个集征信、理财、支付于一身的超级APP.  我心目中支付宝就是一个付钱的工具,对我最有用的就是支付和转账两个功能,最多再加上花呗,可是现在我打开支付宝跟打开一个正常的安卓手机没啥区别,微信虽然臃肿但是用户可以选择关闭,眼不见为净,支付宝就不同了,一打开就是乱七八糟的快应用和让你忘了打开支付宝到底是来干嘛的各种按钮,好像一个热情过度的推销员,心里只想赚你的“流量”,说好的用户体验呢?除此之外还搞了什么生活圈,小程序,生活号什么的,我反正是没用过,放那也不让我关,污染我的眼睛,考验我的好奇心.对比一下paypal,打开就是余额、转账记录和快速转账,最近还添加了分期付款功能,越来越香了. 其实我最喜欢的就是apple pay这种模式,不用扫码,不用打开软件点两下侧边按钮就行,钱包软件够简洁,功能也够用.当然支付宝在普及率、安全性上还是有优势,但是我真的不喜欢乱七八糟的app,现在在德国,所有的东西机会都是超市和一些连锁零售商店买,到哪都有pos机,主力支付使用apple pay爽爆,回国看看apple pay能不能用吧,如果能用还是坚持使用apple pay.</p><h4 id="淘宝"><a href="#淘宝" class="headerlink" title="淘宝"></a>淘宝</h4><p>淘宝(或者说国内大部分购物app)其实我还是比较喜欢的,虽然同样臃肿,什么直播,微淘,洋淘等等功能也不少,但是好歹都是卖货的目的比较统一,对标亚马逊也更好用一点,但是还是要吐槽首页的图标真的太多了,一眼看不过来,好像阿里系的app打开应用打开之后没十几个入口都不好意识叫阿里系,眼花缭乱的风格难受😣.另外各种小游戏和五花八门的优惠卷,除了浪费时间就是浪费时间,把用户当韭菜,利用大家喜欢玩游戏的心里拼命整活,特别不喜欢.</p><h4 id="KEEP"><a href="#KEEP" class="headerlink" title="KEEP"></a>KEEP</h4><p>本来是我很喜欢的软件,健身的时候一些基础训练也拿来用,但是Keep把社群和商城放到首页以后我就卸载了,我下这个软件不是看妹子胸和屁股的,我PornHub又不是登不上去,也不是看健身大神日常装逼的,有个社群功能也行你不放那么明显好吧,我打开本来要健身的,结果一个不小心刷起动态来了,要你何用啊?当然,我猜keep也是急着盈利,毕竟开会员的应该不是很多.</p><h4 id="FACEBOOK"><a href="#FACEBOOK" class="headerlink" title="FACEBOOK"></a>FACEBOOK</h4><p>虽然类型不同,但是缺点感觉和支付宝差不多,不过因为政治问题,我还是更讨厌facebook. 卸了好久了.</p><h4 id="微博"><a href="#微博" class="headerlink" title="微博"></a>微博</h4><p>对于微博,我只想说,恶心走在街上被毒打——恶心“急“了.从未见过如此厚颜无耻之软件,在此赋诗一首:<strong>一半营销号,控屏全水军,热搜全靠卖,删帖寒人心,造谣我不管,流量赛真金,抄的虽然差,墙内无人拼</strong>.之所以放在最后压轴是因为我太讨厌新浪的微博了,但是有比较喜欢”微博客“这种形式,所以把它放在最后压轴,可谓又爱又恨.我讨厌它,不是因为臃肿而是因为这个公司太没底线了,有钱就能删帖,就能买热搜,有流量就能无视版权,就能无底线的营销,恶心急了.有人说删帖是因为检查机关,确实国家审查是控制言论的主要原因,但是这里面有个”度“是各个社群网站自己可以把握的,在我的印象里,微博是删帖控屏,删粉丝最严重的,毫无底线,其他软件难以望其项背,渣浪确实是名不虚传的.不过我还是用着微博的墨客客户端发动态,主要原因是我把微博前如到了博客里,发动态同步到博客比较方便.</p><p>吐槽完了,好爽!虽然我知道这种现象还会继续发展下去,以后的事情肯定不会像我想的那样发展,但是还是希望,手机的app,不要为了多让用户停留几小时,多点几个广告这样消费用户的方向发展,而是专注于赋能用户,助力用户的方向发展帮助用户提高效率,把时间花在刀刃上.你问我那这些app怎么赚钱呢?额… 我也不知道.</p><p>如果你能看完我发的牢骚,你真牛!</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/blog/assets/css/APlayer.min.css"><script src="/blog/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/blog/assets/js/Meting.min.js"></script><p><strong>现在越来越讨厌“超级APP”了.</strong></p><p>最近几年真的明显的感觉到各个领域的专业App开始走上超级App的道路,什么微信生态,支付宝生态等等应用内生态,facebook生态逐渐建立起来,为了让用户多停留一会,加了巨多的功能和接口,部分内容完全偏离app本来的类型,,尤其是国内各种大厂,真的是啥都往里面放,从不做减法.我在使用这种app的感觉是从最初的期待,到赞赏,再到疲惫,再到现在的恶心.下面想挑出几个自己使用比较多的app说一下,屁股决定脑袋,纯属个人使用观点.</p><h4 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h4><p>微信现在真的是APP当中当之无愧的巨无霸,本来只是一款简单的社交软件,刚开始也是凭借易用,成熟的产品逻辑火遍中国,后来开始硬塞各种入口,什么游戏圈,搜一搜,看一看,视频号乱七八糟的,都是些咨询类的功能,特别容易分散注意力.还有现在很火的微信小程序(虽然我也是小程序开发者),虽然分享各种工具确实方便了不少,但是我总觉着这种快应用对用户来说放在Android和ios这种系统层的来做更合适,否则还要打开微信使用,略微有些麻烦,更何况微信的本行还没整明白,微信群连个头像都不能改,安全方面更不用说了,毫无隐私,微信群超过一定人数就可以被查房,所以弄这些花里胡哨的对我个人来说全是累赘,没有实质改进,我也确实能屏蔽的全都屏蔽了.所以现在我准备逐渐放弃使用微信,转到telegram这种功能明确专一的地方,当然完全放弃微信是不可能的,尽量吧,反正平常聊天的朋友也没多少,慢慢把他们“劝”过来.</p><h4 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h4><p>一个集征信、理财、支付于一身的超级APP.  我心目中支付宝就是一个付钱的工具,对我最有用的就是支付和转账两个功能,最多再加上花呗,可是现在我打开支付宝跟打开一个正常的安卓手机没啥区别,微信虽然臃肿但是用户可以选择关闭,眼不见为净,支付宝就不同了,一打开就是乱七八糟的快应用和让你忘了打开支付宝到底是来干嘛的各种按钮,好像一个热情过度的推销员,心里只想赚你的“流量”,说好的用户体验呢?除此之外还搞了什么生活圈,小程序,生活号什么的,我反正是没用过,放那也不让我关,污染我的眼睛,考验我的好奇心.对比一下paypal,打开就是余额、转账记录和快速转账,最近还添加了分期付款功能,越来越香了. 其实我最喜欢的就是apple pay这种模式,不用扫码,不用打开软件点两下侧边按钮就行,钱包软件够简洁,功能也够用.当然支付宝在普及率、安全性上还是有优势,但是我真的不喜欢乱七八糟的app,现在在德国,所有的东西机会都是超市和一些连锁零售商店买,到哪都有pos机,主力支付使用apple pay爽爆,回国看看apple pay能不能用吧,如果能用还是坚持使用apple pay.</p><h4 id="淘宝"><a href="#淘宝" class="headerlink" title="淘宝"></a>淘宝</h4><p>淘宝(或者说国内大部分购物app)其实我还是比较喜欢的,虽然同样臃肿,什么直播,微淘,洋淘等等功能也不少,但是好歹都是卖货的目的比较统一,对标亚马逊也更好用一点,但是还是要吐槽首页的图标真的太多了,一眼看不过来,好像阿里系的app应用打开之后没十几个入口都不好意识叫阿里系,眼花缭乱的风格难受😣.另外各种小游戏和五花八门的优惠卷,除了浪费时间就是浪费时间,把用户当韭菜,利用大家喜欢玩游戏的心里拼命整活,特别不喜欢.</p><h4 id="KEEP"><a href="#KEEP" class="headerlink" title="KEEP"></a>KEEP</h4><p>本来是我很喜欢的软件,健身的时候一些基础训练也拿来用,但是Keep把社群和商城放到首页以后我就卸载了,我下这个软件不是看妹子胸和屁股的,我PornHub又不是登不上去,也不是看健身大神日常装逼的,有个社群功能也行你不放那么明显好吧,我打开本来要健身的,结果一个不小心刷起动态来了,要你何用啊?当然,我猜keep也是急着盈利,毕竟开会员的应该不是很多.</p><h4 id="FACEBOOK"><a href="#FACEBOOK" class="headerlink" title="FACEBOOK"></a>FACEBOOK</h4><p>虽然类型不同,但是缺点感觉和支付宝差不多,不过因为政治问题,我还是更讨厌facebook. 卸了好久了.</p><h4 id="微博"><a href="#微博" class="headerlink" title="微博"></a>微博</h4><p>对于微博,我只想说,恶心走在街上被毒打——恶心“急“了.从未见过如此厚颜无耻之软件,在此赋诗一首:<strong>一半营销号,控屏找水军,热搜全靠卖,删帖寒人心,造谣我不管,流量赛真金,抄的虽然差,墙内无人拼</strong>.之所以放在最后压轴是因为我太讨厌新浪的微博了,但是有比较喜欢”微博客“这种形式,所以把它放在最后压轴,可谓又爱又恨.我讨厌它,不是因为臃肿而是因为这个公司太没底线了,有钱就能删帖,就能买热搜,有流量就能无视版权,就能无底线的营销,恶心急了.有人说删帖是因为检查机关,确实国家审查是控制言论的主要原因,但是这里面有个”度“是各个社群网站自己可以把握的,在我的印象里,微博是删帖控屏,删粉丝最严重的,毫无底线,其他软件难以望其项背,渣浪确实是名不虚传的.不过我还是用着微博的墨客客户端发动态,主要原因是我把微博前如到了博客里,发动态同步到博客比较方便.</p><p>全是自己的感受,这些产品是比我强很多的人设计出来的,肯定有我没想到的角度,但是吐槽完了,好爽!虽然我知道这种现象还会继续发展下去,以后的事情肯定不会像我想的那样发展,但是还是希望,手机的app,不要为了多让用户停留几小时,多点几个广告这样消费用户的方向发展,而是专注于赋能用户,助力用户的方向发展帮助用户提高效率,把时间花在刀刃上.你问我那这些app怎么赚钱呢?额… 我也不知道.</p><p>如果你能看完我发的牢骚,你真牛!</p>]]></content>
       
       
       <categories>
@@ -686,7 +725,7 @@
     
     
     <entry>
-      <title>categories</title>
+      <title>目录</title>
       <link href="/blog/categories/index.html"/>
       <url>/blog/categories/index.html</url>
       
@@ -708,7 +747,7 @@
     
     
     <entry>
-      <title>archives</title>
+      <title>时间轴</title>
       <link href="/blog/archives/index.html"/>
       <url>/blog/archives/index.html</url>
       
@@ -730,7 +769,7 @@
     
     
     <entry>
-      <title>About</title>
+      <title>关于我</title>
       <link href="/blog/about/index.html"/>
       <url>/blog/about/index.html</url>
       
@@ -741,7 +780,7 @@
     
     
     <entry>
-      <title>tags</title>
+      <title>标签</title>
       <link href="/blog/tags/index.html"/>
       <url>/blog/tags/index.html</url>
       
@@ -763,7 +802,7 @@
     
     
     <entry>
-      <title>Things</title>
+      <title>种草</title>
       <link href="/blog/things/index.html"/>
       <url>/blog/things/index.html</url>
       
@@ -774,7 +813,7 @@
     
     
     <entry>
-      <title>link</title>
+      <title>交换友链</title>
       <link href="/blog/about/link/index.html"/>
       <url>/blog/about/link/index.html</url>
       
@@ -785,7 +824,7 @@
     
     
     <entry>
-      <title>Douban</title>
+      <title>豆瓣</title>
       <link href="/blog/life/douban/index.html"/>
       <url>/blog/life/douban/index.html</url>
       
@@ -807,7 +846,7 @@
     
     
     <entry>
-      <title>Footprint (Google Map)</title>
+      <title>足迹 (Google Map)</title>
       <link href="/blog/life/footprint/index.html"/>
       <url>/blog/life/footprint/index.html</url>
       
