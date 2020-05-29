@@ -16,7 +16,54 @@ new Vue({
       currentTime: null,
       isTimerPlaying: false,
       tracks: [
-        
+        {
+          name: "寒鸦少年",
+          artist: "华晨宇",
+          cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200529223558.png",
+          source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E5%8D%8E%E6%99%A8%E5%AE%87%20-%20%E5%AF%92%E9%B8%A6%E5%B0%91%E5%B9%B4.mp3",
+          url: "https://music.163.com/song?id=1407358755&userid=15433008",
+          favorited: true
+        },
+        {
+          name: "齐天大圣",
+          artist: "华晨宇",
+          cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200529224550.png",
+          source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E9%BD%90%E5%A4%A9%E5%A4%A7%E5%9C%A3-%E5%8D%8E%E6%99%A8%E5%AE%87%20.mp3",
+          url: "https://music.163.com/song?id=1407358755&userid=15433008",
+          favorited: true
+        },
+        {
+          name: "我不管",
+          artist: "华晨宇",
+          cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200529224300.png",
+          source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E5%8D%8E%E6%99%A8%E5%AE%87%20-%20%E6%88%91%E7%AE%A1%E4%BD%A0.mp3",
+          url: "https://music.163.com/song?id=1407358755&userid=15433008",
+          favorited: true
+        },
+        {
+          name: "电子羊",
+          artist: "某幻&中国Boy",
+          cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200529224032.png",
+          source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E7%94%B5%E5%AD%90%E7%BE%8A%20-%20%E6%9F%90%E5%B9%BB%E5%90%9B%2C%E4%B8%AD%E5%9B%BDBOY.mp3",
+          url: "https://music.163.com/song?id=1407358755&userid=15433008",
+          favorited: true
+        },
+        {
+          name: "烟火里的尘埃",
+          artist: "华晨宇",
+          cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200529223910.png",
+          source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E5%8D%8E%E6%99%A8%E5%AE%87%20-%20%E7%83%9F%E7%81%AB%E9%87%8C%E7%9A%84%E5%B0%98%E5%9F%83.mp3",
+          url: "https://music.163.com/song?id=1407358755&userid=15433008",
+          favorited: true
+        },
+        {
+          name: "你要相信这不是最后一天",
+          artist: "华晨宇",
+          cover: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200529223144.png",
+          source: "https://img-1253324855.cos.ap-chengdu.myqcloud.com/music/%E4%BD%A0%E8%A6%81%E7%9B%B8%E4%BF%A1%E8%BF%99%E4%B8%8D%E6%98%AF%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9%20-%20%E5%8D%8E%E6%99%A8%E5%AE%87.mp3",
+          url: "https://music.163.com/song?id=1407358755&userid=15433008",
+          favorited: true
+        },
         {
           name: "给你给我",
           artist: "毛不易",
