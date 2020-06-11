@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zkpeace | Zkpeace</title><meta name="description" content=""><meta name="author" content="Kp Zhang"><meta name="copyright" content="Kp Zhang"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/blog/img/logo.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="https://hm.baidu.com"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Zkpeace"><meta name="twitter:description" content=""><meta name="twitter:image" content="https://zkpeace.com/blog/blog/img/post.jpg"><meta property="og:type" content="website"><meta property="og:title" content="Zkpeace"><meta property="og:url" content="https://zkpeace.com/blog/life/gallery/photography/"><meta property="og:site_name" content="Zkpeace"><meta property="og:description" content=""><meta property="og:image" content="https://zkpeace.com/blog/blog/img/post.jpg"><link rel="manifest" href="/blog/img/pwa/manifest.json"/><meta name="theme-color" content="#f1f3f5"/><meta name="msapplication-TileColor" content="#f1f3f5"/><link rel="apple-touch-icon" sizes="180x180" href="/img/logo.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/logo.png"/><link rel="mask-icon" href="/img/logo.png" color="#5bbad5"/><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = 'false'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/blog/css/index.css" ><link rel="stylesheet" href="https://at.alicdn.com/t/font_1624864_afzdnzi9rml.css" ><link rel="stylesheet" href="https://img-1253324855.cos.ap-chengdu.myqcloud.com/css/default.css" ><link rel="stylesheet" href="https://at.alicdn.com/t/font_1814883_v8bzy277cie.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://zkpeace.com/blog/life/gallery/photography/"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-8135851536673895',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?11d5557c880964f2b0559172acee5edb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-165344812-1', 'auto');
+ga('send', 'pageview');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://zkpeace.com/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: Kp Zhang","link":"链接: ","source":"来源: Zkpeace","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: true,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: false,
+  isSidebar: false  
+  }</script><noscript>#page-header(style="opacity: 1")
+.justified-gallery(style="opacity: 1")</noscript><meta name="generator" content="Hexo 4.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/blog/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/blog/archives/"><div class="headline">文章</div><div class="length_num">22</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/blog/tags/"><div class="headline">标签</div><div class="length_num">36</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/blog/categories/"><div class="headline">分类</div><div class="length_num">18</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/fm/"><i class="fa-fw fa fa-headphones"></i><span> FM</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 博客</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类箱</span></a></li><li><a class="site-page" href="https://kpzcx.cn" target="_blank" rel="noopener"><i class="fa-fw fa fa-tags"></i><span> 存档站</span></a></li><li><a class="site-page" href="/blog/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-camera" aria-hidden="true"></i><span> 生活</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog/life/gallery/"><i class="fa-fw fas fa-image"></i><span> 影像</span></a></li><li><a class="site-page" href="/blog/life/footprint/"><i class="fa-fw fas fa-globe-asia"></i><span> 足迹</span></a></li><li><a class="site-page" href="/blog/life/douban/"><i class="fa-fw fas fa-star"></i><span> 豆瓣</span></a></li><li><a class="site-page" href="/blog/things/"><i class="fa-fw fas fa-seedling"></i><span> 种草</span></a></li></ul></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 关于</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> 我的</span></a></li><li><a class="site-page" href="https://zkpeace.com/links/cn/index.html"><i class="fa-fw fa fa-link"></i><span> 链接</span></a></li><li><a class="site-page" href="https://zkpeace.com/wiki/"><i class="fa-fw fas fa-lightbulb"></i><span> 维基</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="https://travellings.now.sh/" target="_blank" rel="noopener"><i class="fa-fw fas fa-door-open"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" href="https://translate.google.com/translate?hl=en&amp;sl=zh-CN&amp;u=https://zkpeace.com" target="_blank" rel="noopener"><i class="fa-fw"></i><span> En</span></a></div></div></div></div><div id="body-wrap"><div class="not-index-bg" id="nav"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="https://zkpeace.com"><img src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/KP_pure.png" style="width:20px"/></a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/fm/"><i class="fa-fw fa fa-headphones"></i><span> FM</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 博客</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类箱</span></a></li><li><a class="site-page" href="https://kpzcx.cn" target="_blank" rel="noopener"><i class="fa-fw fa fa-tags"></i><span> 存档站</span></a></li><li><a class="site-page" href="/blog/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-camera" aria-hidden="true"></i><span> 生活</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog/life/gallery/"><i class="fa-fw fas fa-image"></i><span> 影像</span></a></li><li><a class="site-page" href="/blog/life/footprint/"><i class="fa-fw fas fa-globe-asia"></i><span> 足迹</span></a></li><li><a class="site-page" href="/blog/life/douban/"><i class="fa-fw fas fa-star"></i><span> 豆瓣</span></a></li><li><a class="site-page" href="/blog/things/"><i class="fa-fw fas fa-seedling"></i><span> 种草</span></a></li></ul></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 关于</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-user-astronaut"></i><span> 我的</span></a></li><li><a class="site-page" href="https://zkpeace.com/links/cn/index.html"><i class="fa-fw fa fa-link"></i><span> 链接</span></a></li><li><a class="site-page" href="https://zkpeace.com/wiki/"><i class="fa-fw fas fa-lightbulb"></i><span> 维基</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="https://travellings.now.sh/" target="_blank" rel="noopener"><i class="fa-fw fas fa-door-open"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" href="https://translate.google.com/translate?hl=en&amp;sl=zh-CN&amp;u=https://zkpeace.com" target="_blank" rel="noopener"><i class="fa-fw"></i><span> En</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="page_site-info"><h1 id="site_title">Zkpeace</h1></div></div><main class="fullwidth-layout-page"><div id="page"><div id="article-container"><div class="gallery-group-main">
+    
+  <figure class="gallery-group">
+  <img class="gallery-group-img" src='/blog/img/curioso/1.jpg'>
+  <figcaption>
+  <div class="gallery-group-name">无题</div>
+  <p>一些旧照</p>
+  <a href='/blog/life/gallery/photos'></a>
+  </figcaption>
+  </figure>
+  
+</div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Kp Zhang<a href="/blog/copyright/">&nbspCopyright</a></div><div class="footer_custom_text"><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:16px;">&nbsp &nbsp</a><a href="https://travellings.now.sh/" target="blank" title="开往-友链接力"><img src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200501035301.png" alt="开往-友链接力" style="width:auto;height:16px;">&nbsp &nbsp</a><a href="https://sspai.com/post/43499" target="blank" title="PWA渐进式网站WEB APP"><img src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/public/pwa.png" alt="PWA渐进式网站WEB APP" style="width:auto;height:14px;"></a></div><div class="icp"><a href="http://www.beian.miit.gov.cn/state/outPortal/loginPortal.action" target="_blank" rel="noopener"><img class="icp-icon" src="/blog/img/icp.png"/><span>鲁ICP备20008114号-1</span></a><a href="https://cloud.tencent.com/" target="_blank" rel="noopener">&nbsp<img class="icp-icon" src="/blog/img/tencentcloud.png"/></a><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">&nbsp<img class="icp-icon" src="/blog/img/hexoicon.png"/></a><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">&nbsp<img class="icp-icon" src="/blog/img/Butterfly.png"/></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode far fa-moon" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js" ></script><script src="/blog/js/utils.js" ></script><script src="/blog/js/main.js" ></script><script src="https://at.alicdn.com/t/font_1789453_ouhjvm9rdyn.js" ></script><script src="/blog/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/blog/js/search/local-search.js"></script><script>(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BE4FjazEy0hO4aZn1CSyLYlA69uCbOsmJn2x9ol0yRdFncC-3xweXGguOidGbwI4jkcWmAqXjPW9zNW6DTeckXI');</script></body></html>
