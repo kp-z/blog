@@ -31,7 +31,7 @@
     
     
     <entry>
-      <title>Hexo瀑布流tag插件：Hexo-masonryLayout</title>
+      <title>Hexo Masonry Layout tag Pluging：Hexo-masonryLayout</title>
       <link href="/blog/2020/08/05/Hexo%E7%80%91%E5%B8%83%E6%B5%81tag%E6%8F%92%E4%BB%B6%EF%BC%9AHexo-masonryLayout/"/>
       <url>/blog/2020/08/05/Hexo%E7%80%91%E5%B8%83%E6%B5%81tag%E6%8F%92%E4%BB%B6%EF%BC%9AHexo-masonryLayout/</url>
       
@@ -1024,7 +1024,7 @@
       <link href="/blog/life/gallery/photography/index.html"/>
       <url>/blog/life/gallery/photography/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/blog/assets/css/APlayer.min.css"><script src="/blog/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/blog/assets/js/Meting.min.js"></script><div class="gallery-group-main">      <figure class="gallery-group">  <img class="gallery-group-img" src='https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/zmlm/zmlm-0.JPG'>  <figcaption>  <div class="gallery-group-name">周末撸猫～～</div>  <p>Ipnone X 2020.07.12</p>  <a href='/blog/2020/07/14/%E5%91%A8%E6%9C%AB%E6%92%B8%E7%8C%AB%EF%BD%9E%EF%BD%9E/'></a>  </figcaption>  </figure>        <figure class="gallery-group">  <img class="gallery-group-img" src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/photos/photo0.JPG'>  <figcaption>  <div class="gallery-group-name">无题</div>  <p>一些旧照</p>  <a href='/blog/life/gallery/photos'></a>  </figcaption>  </figure>  </div>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/blog/assets/css/APlayer.min.css"><script src="/blog/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/blog/assets/js/Meting.min.js"></script><div class="gallery-group-main">      <figure class="gallery-group">  <img class="gallery-group-img" src='https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/munchen/IMG_4865.JPG'>  <figcaption>  <div class="gallery-group-name">慕尼黑小众景点航拍</div>  <p>刚买的的Mavic mini拿出来试一下</p>  <a href='/blog/2020/10/07/%E6%85%95%E5%B0%BC%E9%BB%91%E8%AF%95%E9%A3%9EDJI-Mavic-mini/'></a>  </figcaption>  </figure>        <figure class="gallery-group">  <img class="gallery-group-img" src='https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/zmlm/zmlm-0.JPG'>  <figcaption>  <div class="gallery-group-name">周末撸猫～～</div>  <p>Ipnone X 2020.07.12</p>  <a href='/blog/2020/07/14/%E5%91%A8%E6%9C%AB%E6%92%B8%E7%8C%AB%EF%BD%9E%EF%BD%9E/'></a>  </figcaption>  </figure>        <figure class="gallery-group">  <img class="gallery-group-img" src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/photos/photo0.JPG'>  <figcaption>  <div class="gallery-group-name">无题</div>  <p>一些旧照</p>  <a href='/blog/life/gallery/photos'></a>  </figcaption>  </figure>  </div>]]></content>
       
     </entry>
     
