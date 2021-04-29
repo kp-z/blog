@@ -3,6 +3,7 @@ title: 豆瓣
 date: 2021-04-10 21:56:50
 top_img: false
 comments: false
+aside: false
 ---
 
 <style>
@@ -11,9 +12,9 @@ comments: false
         style="background:transparent"
     }
     .douban iframe{
-        width:100%; 
-        height:1500px; 
-        border: none;
+        width:40%; 
+        height:800px; 
+        /* border: st; */
         border-radius: 10px;
     }
 </style>
@@ -26,10 +27,3 @@ comments: false
         sandbox = "allow-scripts allow-same-origin n">
     </iframe>
 </div>
-
-<script type="text/javascript">
-    var x=document.getElementById("iframe");
-    var y=(x.contentWindow || x.contentDocument);
-    if (y.document)y=y.document;
-        y.body.style.backgroundColor="#0000ff";
-</script>

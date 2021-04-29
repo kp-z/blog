@@ -96,8 +96,8 @@ top_img: false
         </div>
     </div>
     <div class="dashboard-weight card-style video">
+        <video class="card-video-black" src='https://img-1253324855.cos.ap-chengdu.myqcloud.com/black.mp4' width='100%' height='100%' controls="controls" preload="auto" ></video>
         <video class="card-video-white" src='https://img-1253324855.cos.ap-chengdu.myqcloud.com/white.mp4' width='100%' height='100%' controls="controls" preload="auto" ></video>
-        <!-- video.card-video-black(src='https://img-1253324855.cos.ap-chengdu.myqcloud.com/black.mp4' controls="controls" preload="auto" ) -->
         <!-- <iframe src="//player.bilibili.com/player.html?aid=200349328&bvid=BV1mz411B7oR&as_wide=1&cid=178894927&page=1" width='100%' height='100%' scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" > </iframe> -->
     </div>
     <div class="dashboard-weight">
