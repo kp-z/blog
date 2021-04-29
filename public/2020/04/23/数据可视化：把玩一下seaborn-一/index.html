@@ -1,0 +1,432 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>数据可视化：把玩一下seaborn(一) | kp</title><meta name="keywords" content="笔记,Python,入门,数据可视化,seaborn"><meta name="author" content="kp"><meta name="copyright" content="kp"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="最近刚开始学习数据可视化，第一个任务就是了解并完成seaborn（一个python处理数据可视化的库）的官方教程，其他数据可视化的内容会后续更新。seaborn在调用数据的时候会有一些数据库相关的操作,例如data&#x3D;data&#x3D;diamonds.sort_values(&quot;color&quot;)这里就不解释了  环境搭建：  下载Anaconda搭建Python环境 下载类库Numpy，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据可视化：把玩一下seaborn(一)">
+<meta property="og:url" content="http://example.com/2020/04/23/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E6%8A%8A%E7%8E%A9%E4%B8%80%E4%B8%8Bseaborn-%E4%B8%80/index.html">
+<meta property="og:site_name" content="kp">
+<meta property="og:description" content="最近刚开始学习数据可视化，第一个任务就是了解并完成seaborn（一个python处理数据可视化的库）的官方教程，其他数据可视化的内容会后续更新。seaborn在调用数据的时候会有一些数据库相关的操作,例如data&#x3D;data&#x3D;diamonds.sort_values(&quot;color&quot;)这里就不解释了  环境搭建：  下载Anaconda搭建Python环境 下载类库Numpy，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/IMG_3410.JPG">
+<meta property="article:published_time" content="2020-04-23T18:18:46.000Z">
+<meta property="article:modified_time" content="2021-04-05T19:36:24.467Z">
+<meta property="article:author" content="kp">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="入门">
+<meta property="article:tag" content="数据可视化">
+<meta property="article:tag" content="seaborn">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/IMG_3410.JPG"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2020/04/23/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E6%8A%8A%E7%8E%A9%E4%B8%80%E4%B8%8Bseaborn-%E4%B8%80/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js" defer></script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"BP5EL7ALCW","apiKey":"8b3ffbc4a8916280e9903bd336c1dda1","indexName":"kp","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-05 21:36:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><script data-pjax src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script><script data-pjax src="https://at.alicdn.com/t/font_1789453_ouhjvm9rdyn.js"></script><link rel="stylesheet" href="/css/things/things.css"><link rel="stylesheet" href="/css/things/sortable.min.css"><link rel="stylesheet" href="/circle/css/default.css"><link rel="stylesheet" href="https//at.alicdn.com/t/font_1624864_afzdnzi9rml.css"><script data-pjax src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Major+Mono+Display&family=Train+One&family=Vast+Shadow&family=Wallpoet&family=Zen+Dots&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">39</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fab fa-blogger-b"></i><span> </span></a><ul class="menus_item_child"><li><a class="site-page child" href="/"><span> 博客</span></a></li><li><a class="site-page child" href="/gallery/"><span> 影像</span></a></li><li><a class="site-page child" href="/travel/"><span> 足迹</span></a></li><li><a class="site-page child" href="/MMB/"><span> 豆瓣</span></a></li><li><a class="site-page child" href="/things/"><span> 东西</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heart"></i><span> </span></a><ul class="menus_item_child"><li><a class="site-page child" href="/Myself/"><span> 介绍</span></a></li><li><a class="site-page child" href="/"><span> 项目</span></a></li><li><a class="site-page child" href="/services/"><span> 服务</span></a></li><li><a class="site-page child" href="/"><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-flask"></i><span> </span></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.notion.so/KP-38432f8d93be45d18943d906262c1273"><span> 维基</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://zkpeace.com/wiki/"><span> 速查</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.zhihu.com/club/1365658701693595648"><span> 论坛</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/IMG_3410.JPG')"><nav id="nav"><span id="blog_name"><img id="site-logo" src="/img/kp-logo.png"/><div id="head-page-title"> <a id="page-name" href="/blog/">ZKPEACE</a><a id="site-slogan" href="/blog/">HOME</a></div></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> </span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fab fa-blogger-b"></i><span> </span></a><ul class="menus_item_child"><li><a class="site-page child" href="/"><span> 博客</span></a></li><li><a class="site-page child" href="/gallery/"><span> 影像</span></a></li><li><a class="site-page child" href="/travel/"><span> 足迹</span></a></li><li><a class="site-page child" href="/MMB/"><span> 豆瓣</span></a></li><li><a class="site-page child" href="/things/"><span> 东西</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heart"></i><span> </span></a><ul class="menus_item_child"><li><a class="site-page child" href="/Myself/"><span> 介绍</span></a></li><li><a class="site-page child" href="/"><span> 项目</span></a></li><li><a class="site-page child" href="/services/"><span> 服务</span></a></li><li><a class="site-page child" href="/"><span> 友链</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-flask"></i><span> </span></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.notion.so/KP-38432f8d93be45d18943d906262c1273"><span> 维基</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://zkpeace.com/wiki/"><span> 速查</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.zhihu.com/club/1365658701693595648"><span> 论坛</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据可视化：把玩一下seaborn(一)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-04-23T18:18:46.000Z" title="发表于 2020-04-23 20:18:46">2020-04-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-05T19:36:24.467Z" title="更新于 2021-04-05 21:36:24">2021-04-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/">笔记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/Python/">Python</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/Python/seaborn/">seaborn</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据可视化：把玩一下seaborn(一)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>最近刚开始学习数据可视化，第一个任务就是了解并完成seaborn（一个python处理数据可视化的库）的官方教程，其他数据可视化的内容会后续更新。seaborn在调用数据的时候会有一些数据库相关的操作,例如<code>data=data=diamonds.sort_values(&quot;color&quot;)</code>这里就不解释了</p>
+</blockquote>
+<p>环境搭建：</p>
+<ul>
+<li>下载<a target="_blank" rel="noopener" href="https://www.anaconda.com/distribution/">Anaconda</a>搭建Python环境</li>
+<li>下载类库Numpy， SciPy， matplotlib， pandas 和 seaborn</li>
+</ul>
+<p>引入需要的库，设置一下显示网格的样式</p>
+<pre><code class="language-python">import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+</code></pre>
+<h2 id="数据关系可视化">数据关系可视化</h2>
+<p>接下来我们使用seaborn最常用的方法<a target="_blank" rel="noopener" href="https://seaborn.pydata.org/generated/seaborn.relplot.html#seaborn.relplot"><code>relplot()</code></a>实现散点图<code>scatterplot()</code>和线图<code>lineplot()</code></p>
+<h3 id="散点图-Scatter-plots">散点图 Scatter plots</h3>
+<p>首先可以引入seaborn中自带事例子数据集“tips”,这个数据集的属性有</p>
+<ul>
+<li>
+<p>时间数据 week</p>
+</li>
+<li>
+<p>账单: 总消费,小费 total_bill, tips</p>
+</li>
+<li>
+<p>消费者性别 sex</p>
+</li>
+<li>
+<p>消费者是否抽烟 smoker</p>
+<p>…</p>
+</li>
+</ul>
+<p>下面很多例子使用了tips数据集,不会再特别指出</p>
+<pre><code class="language-python">sns.set(style=&quot;darkgrid&quot;) # 设置样式为网格
+tips = sns.load_dataset(&quot;tips&quot;)
+</code></pre>
+<p>其实seaborn中有很多画散点图的方法其中一种是<a target="_blank" rel="noopener" href="https://seaborn.pydata.org/generated/seaborn.scatterplot.html#seaborn.scatterplot"><code>scatterplot()</code></a>，使用方法是把数据集中的集合分配给方法中的属性,这样不同集合就会使用散点图中不同属性的样式展示出来如下面实例中的色调属性<code>hue</code>获取了数据集中的<code>smoker</code>集合,这样集合中的数据差异就可以通过色调的不同展示出来,其他同理.</p>
+<pre><code class="language-python">sns.relplot(x=&quot;total_bill&quot;, y=&quot;tip&quot;, size=&quot;size&quot;,hue=&quot;smoker&quot;, palette=&quot;ch:r=-.5,l=.75&quot;,  style=&quot;time&quot;,sizes=(15, 200), data=tips);
+</code></pre>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423194837.png" alt=""></p>
+<p><code>scatterplot</code>是<code>relplot</code>的默认方法所以不需要单独设置,具体属性可以去<a target="_blank" rel="noopener" href="https://seaborn.pydata.org/generated/seaborn.scatterplot.html#seaborn.scatterplot"><code>scatterplot()</code></a>的Api查看.</p>
+<h3 id="折线图强调连续性-Emphasizing-continuity-with-line-plots">折线图强调连续性 Emphasizing continuity with line plots</h3>
+<p>下面介绍一下<code>relplot</code>里的第二个方法<code>lineplot</code>,前面说过默认方法是<code>scatterplot</code>所以要设置属性<code>kind=lineplot</code>启用折线图,这个方法默认<code>sort=true</code>将x轴数据与y轴数据按顺序对应起来.</p>
+<pre><code class="language-python">fmri = sns.load_dataset(&quot;fmri&quot;)
+sns.relplot(x=&quot;timepoint&quot;, 
+            y=&quot;signal&quot;,
+            hue=&quot;region&quot;, 
+            style=&quot;event&quot;,
+            dashes=True, # 开启显示虚线
+            markers=True, # 显示标记
+          	# ci=&quot;sd&quot; # 显示标准偏差,默认是显示置信区间,None关闭显示
+            kind=&quot;line&quot;, 
+            data=fmri);
+</code></pre>
+<p>这里我们引入一个新的fmri数据集</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423194924.png" alt=""></p>
+<h3 id="同时显示多了图表">同时显示多了图表</h3>
+<p>用到<code>relplot</code>的属性是<code>col</code>和<code>col_wrap</code>自动分行,同理也可以用<code>row</code>属性设置列.</p>
+<pre><code class="language-python">sns.relplot(x=&quot;timepoint&quot;, y=&quot;signal&quot;, hue=&quot;event&quot;, style=&quot;event&quot;,
+            col=&quot;subject&quot;, 
+            col_wrap=5, # 设置每行显示图表数量
+            height=3, # 每个图表的高度 
+            kind=&quot;line&quot;,
+            data=fmri.query(&quot;region == 'frontal'&quot;));
+</code></pre>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423195006.png" alt=""></p>
+<h2 id="数据种类的可视化-Plotting-with-categorical-data">数据种类的可视化 Plotting with categorical data</h2>
+<p>对数据进行分类可视化用到的方法是<a target="_blank" rel="noopener" href="https://seaborn.pydata.org/generated/seaborn.catplot.html#seaborn.catplot"><code>catplot()</code></a>,和数据关系可视化类似,<code>catplot()</code>也有多种分类(kind),包括散点图(<code>strip</code>,<code>swarm</code>),分布图(<code>box</code>,<code>violin</code>,<code>boxen</code>)和柱状图(<code>point</code>,<code>bar</code>,<code>count</code>).</p>
+<pre><code class="language-python">sns.set(style=&quot;ticks&quot;, color_codes=True) #设置一下样式
+</code></pre>
+<h3 id="散点图-categories-scatterplots">散点图 categories scatterplots</h3>
+<p>除了种类外,散点图能精确的显示数据的分布,散点图默认显示方式是<code>stript,例如下面的例子,</code></p>
+<pre><code class="language-python">tips = sns.load_dataset(&quot;tips&quot;) #载入数据
+sns.catplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips); 
+</code></pre>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423195034.png" alt=""></p>
+<p>可以发现上面有些数据重叠在一起了,解决这个问题可以使用<code>jitter</code>属性,也可使用另一种散点图<code>swarm</code>,它自动使用算法区分出可能重叠的数据.需要注意的是可以使用<code>order</code>来控制顺序.下面的例子可以看出</p>
+<pre><code class="language-python">sns.catplot(x=&quot;total_bill&quot;, y=&quot;day&quot;, hue=&quot;time&quot;, kind=&quot;swarm&quot;,  order=[&quot;Sun&quot;, &quot;Sat&quot;,&quot;Fri&quot;,&quot;Thur&quot;], data=tips);
+</code></pre>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423195054.png" alt=""></p>
+<h3 id="分布图-Distributions-of-observations-within-categories">分布图 Distributions of observations within categories</h3>
+<p>数据量太大的时候,散点图显示不同种类的分布情况非常恐怖,所以可以使用分布图来观察不同种类数据的分布情况,具体代码就不贴了,只需要更改一下<code>kind</code>属性就可以了,下面分别看一下<code>box</code>,<code>boxen</code>,<code>violin</code>三种情况不同的显示风格:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423195117.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423195152.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423195213.png" alt=""></p>
+<p>其中要重点说一下<code>violin</code>方法使用了<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Kernel_density_estimation">KDE</a>,因此有一些额外的属性可以设置,具体可以查看一下<a target="_blank" rel="noopener" href="https://seaborn.pydata.org/generated/seaborn.violinplot.html#seaborn.violinplot">api</a>例如:</p>
+<pre><code class="language-python">sns.catplot(x=&quot;total_bill&quot;, y=&quot;day&quot;, hue=&quot;sex&quot;,bw=.4, cut=2, inner=&quot;stick&quot;,
+            kind=&quot;violin&quot;, split=True, data=tips);
+</code></pre>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423195310.png" alt=""></p>
+<h3 id="合并图表">合并图表</h3>
+<p>另外看一下如何将两个不同类型的图表合为一个,例如下面我们将<code>violin</code>和<code>swarm</code>类型的图表在一张图里展示:</p>
+<pre><code class="language-python">g = sns.catplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, kind=&quot;violin&quot;, inner=None, data=tips)
+sns.swarmplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, color=&quot;k&quot;, size=3, data=tips, ax=g.ax);
+</code></pre>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423195326.png" alt=""></p>
+<h3 id="数据估计">数据估计</h3>
+<p>很多情况我们是不需要特别精确的数据信息的,只需要了解各个分类的走势和差异性,这个时候柱状图<code>bar</code>和点状图<code>point</code>可以展示的信息更简洁明了.</p>
+<p>例如这里我们引入一个新的数据集titanic来分析一下泰坦尼克号上不同仓位的乘客的生存率</p>
+<pre><code class="language-python">titanic = sns.load_dataset(&quot;titanic&quot;)
+</code></pre>
+<p>首先下面看一下柱状图,这张图是可以直观的比较出各个仓位的生存率,需要指出的是柱状图的矩形边框也可以设置颜色.</p>
+<pre><code class="language-python">sns.catplot(x=&quot;class&quot;, 
+            y=&quot;survived&quot;, hue=&quot;sex&quot;,
+            palette=&#123;&quot;male&quot;: &quot;g&quot;, &quot;female&quot;: &quot;m&quot;&#125;, # 设置hue属性显示的颜色
+            edgecolor=&quot;.6&quot;,
+            kind=&quot;bar&quot;, 
+            data=titanic);
+</code></pre>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423200632.png" alt=""></p>
+<p>点状图可以设置的属性也有很多,比如线的样式,点的样式等等</p>
+<pre><code class="language-python">sns.catplot(x=&quot;class&quot;, y=&quot;survived&quot;, hue=&quot;sex&quot;,
+            palette=&#123;&quot;male&quot;: &quot;g&quot;, &quot;female&quot;: &quot;m&quot;&#125;,
+            markers=[&quot;^&quot;, &quot;o&quot;], linestyles=[&quot;-&quot;, &quot;--&quot;],
+            kind=&quot;point&quot;, data=titanic);
+</code></pre>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423200918.png" alt=""></p>
+<h3 id="图表的大小控制">图表的大小控制</h3>
+<p>设置图表的大小可以使用matplotlib里的<code>plt.subplots(figsize=(width,height))</code></p>
+<p>想要改变图表各个轴的精度可以使用<code>set</code>方法参照下面的实例</p>
+<pre><code class="language-python">g = sns.catplot(x=&quot;fare&quot;, y=&quot;survived&quot;, row=&quot;class&quot;,
+                kind=&quot;box&quot;, orient=&quot;h&quot;, height=1.5, aspect=4,
+                data=titanic.query(&quot;fare &gt; 0&quot;))
+g.set(xscale=&quot;log&quot;); # x轴以对数形式显示
+</code></pre>
+<p><img src= "/img/loading.gif" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200423201349.png" alt=""></p>
+<p>参考资料:</p>
+<p><a target="_blank" rel="noopener" href="https://seaborn.pydata.org/tutorial.html">seaborn tutorial</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">kp</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2020/04/23/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E6%8A%8A%E7%8E%A9%E4%B8%80%E4%B8%8Bseaborn-%E4%B8%80/">http://example.com/2020/04/23/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E6%8A%8A%E7%8E%A9%E4%B8%80%E4%B8%8Bseaborn-%E4%B8%80/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">kp</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E5%85%A5%E9%97%A8/">入门</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">数据可视化</a><a class="post-meta__tags" href="/tags/seaborn/">seaborn</a></div><div class="post_share"><div class="social-share" data-image="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/IMG_3410.JPG" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/04/29/%E5%B2%9B%E5%B1%BF-%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E5%8D%9A%E5%AE%A2%E6%90%9C%E9%9B%86%E9%A1%B5/"><img class="prev-cover" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/public/IMG_3528.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">岛屿--个人网站博客搜集页</div></div></a></div><div class="next-post pull-right"><a href="/2020/04/17/%E6%89%8B%E8%87%82%E6%9C%BA%E5%99%A8%E4%BA%BA:%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%A3%80%E6%B5%8B%E7%89%A9%E4%BD%93%E4%B8%8E%E8%BF%90%E5%8A%A8%E8%A7%84%E5%88%92/"><img class="next-cover" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/ar_lab/cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">手臂机器人:机器人检测物体与运动规划</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/05/22/数据可视化：把玩一下seaborn-二/" title="数据可视化：把玩一下seaborn(二)"><img class="cover" data-lazy-src="https://img-1253324855.cos.ap-chengdu.myqcloud.com/myweb/articles/vda/20200522225020.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-22</div><div class="title">数据可视化：把玩一下seaborn(二)</div></div></a></div><div><a href="/2019/10/24/快速掌握NumPy/" title="快速掌握NumPy"><img class="cover" data-lazy-src="https://miro.medium.com/max/560/1*56Zr8V9k_5Wr3ctJi3wRyw.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-24</div><div class="title">快速掌握NumPy</div></div></a></div><div><a href="/2020/02/22/小程序UI组件推荐/" title="小程序UI组件推荐"><img class="cover" data-lazy-src="https://i.loli.net/2020/02/22/rd9nc2sQhqjaf6V.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-22</div><div class="title">小程序UI组件推荐</div></div></a></div><div><a href="/2020/02/22/小程序功能组件推荐/" title="小程序功能组件推荐"><img class="cover" data-lazy-src="https://i.loli.net/2020/02/22/rd9nc2sQhqjaf6V.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-22</div><div class="title">小程序功能组件推荐</div></div></a></div><div><a href="/2020/01/29/图形学笔记：变换Transformations/" title="图形学笔记：变换 Transformations"><img class="cover" data-lazy-src="https://i.loli.net/2019/08/25/atF3WkgSR2L7y5Q.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-29</div><div class="title">图形学笔记：变换 Transformations</div></div></a></div><div><a href="/2019/08/24/Hexo建站相关文章收藏汇总/" title="Hexo建站相关文章收藏汇总"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-08-24</div><div class="title">Hexo建站相关文章收藏汇总</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%85%B3%E7%B3%BB%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.</span> <span class="toc-text">数据关系可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE-Scatter-plots"><span class="toc-number">1.1.</span> <span class="toc-text">散点图 Scatter plots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%98%E7%BA%BF%E5%9B%BE%E5%BC%BA%E8%B0%83%E8%BF%9E%E7%BB%AD%E6%80%A7-Emphasizing-continuity-with-line-plots"><span class="toc-number">1.2.</span> <span class="toc-text">折线图强调连续性 Emphasizing continuity with line plots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%97%B6%E6%98%BE%E7%A4%BA%E5%A4%9A%E4%BA%86%E5%9B%BE%E8%A1%A8"><span class="toc-number">1.3.</span> <span class="toc-text">同时显示多了图表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%A7%8D%E7%B1%BB%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96-Plotting-with-categorical-data"><span class="toc-number">2.</span> <span class="toc-text">数据种类的可视化 Plotting with categorical data</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE-categories-scatterplots"><span class="toc-number">2.1.</span> <span class="toc-text">散点图 categories scatterplots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%9B%BE-Distributions-of-observations-within-categories"><span class="toc-number">2.2.</span> <span class="toc-text">分布图 Distributions of observations within categories</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%9B%BE%E8%A1%A8"><span class="toc-number">2.3.</span> <span class="toc-text">合并图表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BC%B0%E8%AE%A1"><span class="toc-number">2.4.</span> <span class="toc-text">数据估计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E8%A1%A8%E7%9A%84%E5%A4%A7%E5%B0%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">2.5.</span> <span class="toc-text">图表的大小控制</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><div class="search-dialog__title" id="algolia-search-title">Algolia</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'kp-cloud-0gbpqc4i2e1ec1ea',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'kp-cloud-0gbpqc4i2e1ec1ea',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script data-pjax src="/circle/js/raphael.js" type="text/javascript"></script><script data-pjax src="/circle/js/init.js" type="text/javascript"></script><script data-pjax src="/js/chart/githubcalendar.js"></script><script data-pjax src="/js/chart/sun.js"></script><script data-pjax src="/js/chart/radar.js"></script><script data-pjax src="/js/chart/gantt.js"></script><script data-pjax src='/js/fm/vue.min.js'></script><script data-pjax src="/js/fm/script.js"></script><script>((window.gitter = {}).chat = {}).options = {
+  disableDefaultChat: true,
+};
+document.addEventListener('gitter-sidecar-ready', (e) => {
+  const GitterChat = e.detail.Chat
+  let chat
+
+  function initGitter () {
+    chat = new GitterChat({
+      room: 'Zkpeace/community',
+      activationElement: '#chat_btn'
+    });
+  }
+
+  initGitter()
+
+  if (true) {
+    document.addEventListener('pjax:complete', () => {
+      chat.destroy()
+      initGitter()
+    })
+  }
+
+})</script><script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="async" defer="defer"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
