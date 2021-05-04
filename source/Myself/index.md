@@ -84,7 +84,7 @@ top_img: false
 				    <img class="cloud" src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/Cloud.png'> </img>
 				</div>
                 <div class="declaration">
-                    <a class="main-title">HIRE ME, FIND ME</a><br></br>
+                    <a class="main-title">FIND ME, HIRE ME</a><br></br>
                     <a class="description">the services i can provide now </a><br></br>
                     <a class="main-content">WEB DEVELOPING & DESIGNING</a><br></br>
                     <a class="description">my dream is go to mars and to be a</a><br></br>

@@ -301,7 +301,7 @@ var loading_git = (color) => {
     var github_container = document.getElementById('github_container');
     var github_loading = document.getElementById('github_loading');
     var git_purple = ['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f', ];
-    var git_green = ['#ebedf0', '#7bed9f', '#5be988', '#44d981', '#24e260', '#eccc68', '#f1c40f', '#ffa502', '#ff6348', '#ff6b81', '#ff4757'];
+    var git_green = ['rgba(235,237,240,.2)', '#7bed9f', '#5be988', '#44d981', '#24e260', '#eccc68', '#f1c40f', '#ffa502', '#ff6348', '#ff6b81', '#ff4757'];
     var git_blue = ['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c', ];
     var git_color = git_green;
     append_div_gitcalendar(github_container, loading_git(git_color[4]));
