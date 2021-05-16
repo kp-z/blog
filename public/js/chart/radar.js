@@ -38,7 +38,7 @@ var indicator = [{
 ];
 var dataArr = [{
         name: "自我评价",
-        value: [160, 700, 1100, 800, 1100, 900, 1400, 1600],
+        value: [1100, 1100, 1300, 700, 1200, 1400, 500, 1100],
         lineStyle: {
             normal: {
                 color: "rgba(2255,255,255,0)"

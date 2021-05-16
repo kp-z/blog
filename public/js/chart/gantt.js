@@ -180,7 +180,7 @@ option = {
         height: '60%',
         top: 25,
         left:20,
-        width:'95%'
+        width:'93%'
 
     },
     xAxis: {

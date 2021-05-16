@@ -58,7 +58,7 @@ top_img: false
                 <i class="fab fa-youtube"></i>
             </a>
             <div class="plant-3d">
-                    <img  src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/Plant%201.png'> </img>
+                    <img  src='/img/3dIcon/objects/Plant%201.png'> </img>
             </div>
         </div>
     </div>
@@ -67,12 +67,13 @@ top_img: false
             <div id="github_container"></div>
         </div>
         <div   class="weight-half card-style">
-            <div id="gantt" style="position:relative;width:101%;height:100%"></div>
+            <div id="gantt" style="width:100%;height:100%"></div>
         </div> 
     </div>
     <div class="dashboard-weight  card-style">
+        <div class = "skills-title">SKILLS</div>
 		<div class="plant2" >
-			<img  src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/Plant%202.png'> </img>
+			<img  src='/img/3dIcon/objects/Plant%202.png'> </img>
 		</div>
         <div id="sun" style="position:relative;width:100%;height:100%"></div>
     </div>
@@ -80,8 +81,8 @@ top_img: false
         <div>
             <div>
                 <div class="pattern-3d">
-                    <img class="rocket"  src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/rocket.png'> </img>
-				    <img class="cloud" src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/Cloud.png'> </img>
+                    <img class="rocket"  src='/img/3dIcon/objects/rocket.png'> </img>
+				    <img class="cloud" src='/img/3dIcon/objects/Cloud.png'> </img>
 				</div>
                 <div class="declaration">
                     <a class="main-title">FIND ME, HIRE ME</a><br></br>
@@ -102,18 +103,19 @@ top_img: false
     </div>
     <div class="dashboard-weight">
         <div class="weight-quarter card-style top left radar-contianer">
+            <div class = "personility-title">INJT</div>
             <div id="radar" style="position:relative;width:100%;height:100%"></div>
         </div>
         <div class="weight-quarter card-style top">
             <div id="interests" >
-                <div class="interest"><img src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/cube%20a.png' ></div>
-                <div class="interest"><img src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/red%20book%202.png' ></div>
-                <div class="interest"><img src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/Basketball%20Color.png' ></div>
+                <div class="interest"><img src='/img/3dIcon/objects/cube%20a.png' ></div>
+                <div class="interest"><img src='/img/3dIcon/objects/red%20book%202.png' ></div>
+                <div class="interest"><img src='/img/3dIcon/objects/Basketball%20Color.png' ></div>
             </div>
             <div id="interests" >
-                <div class="interest"><img src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/cam%201.png' ></div>
-                <div class="interest"><img src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/gamepad.png' ></div>
-                <div class="interest"><img src='https://hk-1253324855.cos.ap-hongkong.myqcloud.com/my-web/3d-models/Weight%20Color.png' ></div>
+                <div class="interest"><img src='/img/3dIcon/objects/cam%201.png' ></div>
+                <div class="interest"><img src='/img/3dIcon/objects/gamepad.png' ></div>
+                <div class="interest"><img src='/img/3dIcon/objects/Weight%20Color.png' ></div>
             </div>
         </div>
         <div class="weight-quarter left card-style">
